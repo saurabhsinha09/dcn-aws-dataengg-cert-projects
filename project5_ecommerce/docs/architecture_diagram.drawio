@@ -1,0 +1,482 @@
+<mxfile host="app.diagrams.net" agent="Antigravity AI Agent" pages="5">
+  <diagram id="page-overview" name="Overview">
+    <mxGraphModel dx="1989" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ov-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="760" width="1320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Use case: Event-Driven E-Commerce Pipeline using &lt;b&gt;Amazon S3&lt;/b&gt;, &lt;b&gt;EventBridge&lt;/b&gt;, &lt;b&gt;Step Functions&lt;/b&gt;, &lt;b&gt;ECS Fargate&lt;/b&gt; &amp;amp; &lt;b&gt;DynamoDB&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E05243;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="190" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="155" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#E05243;fontFace=Arial;align=center;" value="Amazon S3&#xa;Landing Zone" vertex="1">
+          <mxGeometry height="40" width="200" x="80" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;s3://.../ecommerce-data/new/&lt;/b&gt;&#xa;• orders_YYYYMMDD.csv&#xa;• order_items_YYYYMMDD.csv&#xa;• products_YYYYMMDD.csv" vertex="1">
+          <mxGeometry height="90" width="200" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-eb-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-eb-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="405" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-eb-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="Amazon EventBridge&#xa;Event Trigger" vertex="1">
+          <mxGeometry height="40" width="200" x="330" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-eb-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Rule Name:&lt;/b&gt;&#xa;trigger-stepfunctions-ecs-tasks&#xa;&#xa;&lt;b&gt;Pattern:&lt;/b&gt; S3 Object Created on&#xa;ecommerce-data/new/order_items" vertex="1">
+          <mxGeometry height="110" width="200" x="330" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C71325;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="570" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.step_functions;labelBackgroundColor=none;sketch=0;fillColor=#C71325;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="665" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#C71325;fontFace=Arial;align=center;" value="AWS Step Functions&#xa;State Machine" vertex="1">
+          <mxGeometry height="40" width="220" x="580" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;workflow-ecommerce-tasks&lt;/b&gt;&lt;br&gt;1. Task 1: DataValidation&amp;nbsp;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;(waitForTaskToken)&lt;br&gt;2. Choice: CheckCondition&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;(all valid?)&lt;br&gt;3. Task 2: InvokeSecondTask (ETL)&lt;br&gt;4. Fallback: EndState (Pass)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="190" x="580" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="210" x="840" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="935" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="AWS ECS Fargate&#xa;Serverless Containers" vertex="1">
+          <mxGeometry height="40" width="220" x="850" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;dcn-ecommerce-data-cluster&lt;/b&gt;&#xa;• &lt;b&gt;Task 1:&lt;/b&gt; ecom_data_validation&#xa;  (schema, dtypes, task token)&#xa;• &lt;b&gt;Task 2:&lt;/b&gt; etl_aggregations&#xa;  (joins, KPI calculation, archive)" vertex="1">
+          <mxGeometry height="140" width="220" x="850" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E73B8;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="1128" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1203" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="Amazon DynamoDB&#xa;NoSQL KPI Store" vertex="1">
+          <mxGeometry height="40" width="180" x="1138" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Low-Latency KPI Tables:&lt;/b&gt;&#xa;1. &lt;b&gt;category_wise_summary&lt;/b&gt;&#xa;   (revenue, order count, returns)&#xa;2. &lt;b&gt;daily_order_summary&lt;/b&gt;&#xa;   (daily revenue, totals, customers)" vertex="1">
+          <mxGeometry height="140" width="180" x="1138" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-btm-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="290" width="990" x="238" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecr-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecr;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="268" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecr-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#E05243;fontFace=Arial;align=left;" value="Amazon ECR Container Registry" vertex="1">
+          <mxGeometry height="30" width="400" x="343" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecr-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Repository:&lt;/b&gt; dcn-ecommerce-pipelines&#xa;&lt;b&gt;Docker Images:&lt;/b&gt;&#xa;• ecom_data_validation:latest (Task 1 container)&#xa;• etl_aggregations:latest (Task 2 container)" vertex="1">
+          <mxGeometry height="80" width="400" x="343" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lifecycle-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="758" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lifecycle-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#E05243;fontFace=Arial;align=left;" value="S3 Data Lifecycle Management" vertex="1">
+          <mxGeometry height="30" width="420" x="833" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lifecycle-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Automated File Stages:&lt;/b&gt;&#xa;1. &lt;b&gt;new/&lt;/b&gt; → Ingested CSV files landing prefix&#xa;2. &lt;b&gt;ready/&lt;/b&gt; → Validated CSV files (orders, order_items, products)&#xa;3. &lt;b&gt;archived/&lt;/b&gt; → Processed CSV files post-ETL aggregation" vertex="1">
+          <mxGeometry height="90" width="370" x="833" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-footer-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=1;fontSize=12;fontStyle=1;fontColor=#311B92;fontFace=Arial;" value="Serverless &amp;amp; Event-Driven: Zero infrastructure idle cost. Triggered automatically on S3 upload, executed via ECS Fargate." vertex="1">
+          <mxGeometry height="40" width="930" x="268" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-conn1" edge="1" parent="1" source="ov-src-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-eb-box" value="S3 Object Created">
+          <mxGeometry relative="1" x="-0.2" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-conn2" edge="1" parent="1" source="ov-eb-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-orch-box" value="Triggers Workflow">
+          <mxGeometry relative="1" x="-0.2" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-conn3" edge="1" parent="1" source="ov-orch-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-ecs-box" value="Runs Fargate Tasks">
+          <mxGeometry relative="1" x="-0.1429" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-conn4" edge="1" parent="1" source="ov-ecs-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-ddb-box" value="Upserts KPIs">
+          <mxGeometry relative="1" x="0.0256" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-master" name="Master System Architecture">
+    <mxGraphModel dx="1989" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1620" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🛒 E-Commerce Data Engineering Architecture: S3 → EventBridge → Step Functions → ECS Fargate Containers → DynamoDB NoSQL" vertex="1">
+          <mxGeometry height="36" width="1350" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="Serverless Event-Driven Pipeline for Schema Validation, Data Cleaning, Multi-Table Joins &amp;amp; DynamoDB KPI Aggregations" vertex="1">
+          <mxGeometry height="25" width="1000" x="350" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp1" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="1. Event Trigger &amp;amp; Source Layer" vertex="1">
+          <mxGeometry height="740" width="240" x="40" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontColor=#E65100;" value="S3 Input Folder&lt;br&gt;s3://dcn-dataengg/&lt;br&gt;ecommerce-data/new/" vertex="1">
+          <mxGeometry height="70" width="200" x="60" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-f1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=11;fontColor=#263238;align=left;spacingLeft=10;" value="📄 &lt;b&gt;orders_YYYYMMDD.csv&lt;/b&gt;&#xa;(order_id, user_id, status, created_at, num_of_item)" vertex="1">
+          <mxGeometry height="55" width="200" x="60" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-f2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=11;fontColor=#263238;align=left;spacingLeft=10;" value="📄 &lt;b&gt;order_items_YYYYMMDD.csv&lt;/b&gt;&#xa;(item_id, order_id, product_id, sale_price, status, created_at)" vertex="1">
+          <mxGeometry height="60" width="200" x="60" y="407" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-f3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=11;fontColor=#263238;align=left;spacingLeft=10;" value="📄 &lt;b&gt;products_YYYYMMDD.csv&lt;/b&gt;&#xa;(id, cost, category, name, brand, retail_price, department)" vertex="1">
+          <mxGeometry height="60" width="200" x="60" y="477" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-eb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="⚡ Amazon EventBridge&#xa;&lt;b&gt;trigger-stepfunctions-ecs-tasks&lt;/b&gt;&#xa;Filter: S3 Object Created on&#xa;ecommerce-data/new/order_items" vertex="1">
+          <mxGeometry height="120" width="200" x="60" y="607" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp2" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="2. Orchestration Layer (Step Functions)" vertex="1">
+          <mxGeometry height="740" width="260" x="310" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-sf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="⚡ State Machine&#xa;&lt;b&gt;workflow-ecommerce-tasks&lt;/b&gt;&#xa;---------------------------------&#xa;1. DataValidation (ECS Task 1)&#xa;   (waitForTaskToken pattern)&#xa;2. CheckCondition (Choice state)&#xa;   (orders=1 &amp;amp; items=1 &amp;amp; products=1?)&#xa;3. InvokeSecondTask (ECS Task 2)&#xa;4. EndState (Pass fallback)" vertex="1">
+          <mxGeometry height="190" width="220" x="330" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#37474F;" value="IAM Role: dcn-dataengg-stepfunc-ecs-role&#xa;• AmazonECS_FullAccess&#xa;• CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="100" width="220" x="330" y="513" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-token" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=1.5;fontSize=11;fontColor=#E65100;" value="🔑 Task Token Callback Pattern&#xa;Pauses workflow until container validation calls send_task_success()" vertex="1">
+          <mxGeometry height="65" width="220" x="330" y="643" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp3" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="3. Container Registry (Amazon ECR)" vertex="1">
+          <mxGeometry height="740" width="240" x="600" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-ecr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C71325;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="📦 ECR Repository&#xa;&lt;b&gt;dcn-ecommerce-pipelines&lt;/b&gt;&#xa;<aws-account-id>.dkr.ecr.ap-south-1.amazonaws.com" vertex="1">
+          <mxGeometry height="90" width="200" x="620" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-img1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#1A237E;" value="🐳 Image Tag 1&#xa;&lt;b&gt;ecom_data_validation:latest&lt;/b&gt;&#xa;• Python 3.11 + pandas&#xa;• Validates schemas &amp;amp; dtypes&#xa;• Sends Task Token success result" vertex="1">
+          <mxGeometry height="110" width="200" x="620" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-img2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#004D40;" value="🐳 Image Tag 2&#xa;&lt;b&gt;etl_aggregations:latest&lt;/b&gt;&#xa;• AWS Wrangler + pandas + boto3&#xa;• Joins multi-table CSVs&#xa;• Computes category &amp;amp; daily KPIs&#xa;• Upserts to DynamoDB NoSQL" vertex="1">
+          <mxGeometry height="130" width="200" x="620" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp4" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="4. Serverless Compute (AWS ECS Fargate)" vertex="1">
+          <mxGeometry height="740" width="290" x="870" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-cluster" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="🖥️ ECS Fargate Cluster&#xa;&lt;b&gt;dcn-ecommerce-data-cluster&lt;/b&gt;&#xa;• Subnets: subnet-01ebfc99... &amp;amp; subnet-0a3f5add...&#xa;• Public IP: ENABLED" vertex="1">
+          <mxGeometry height="80" width="250" x="890" y="279" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-t1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;" value="⚙️ Task Definition 1&#xa;&lt;b&gt;task-data-validation&lt;/b&gt;&#xa;(container-data-validation)&#xa;• Reads raw CSVs from new/&#xa;• Enforces exact column dtypes&#xa;• Moves valid files to ready folders&#xa;• Triggers Step Functions token callback" vertex="1">
+          <mxGeometry height="120" width="250" x="890" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-t2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#004D40;" value="⚙️ Task Definition 2&#xa;&lt;b&gt;task-etl-calculations&lt;/b&gt;&#xa;(etl-calculations)&#xa;• Reads validated CSVs via AWS Wrangler&#xa;• Joins orders + order_items + products&#xa;• Computes category &amp;amp; daily KPIs&#xa;• Upserts DynamoDB &amp;amp; archives CSVs" vertex="1">
+          <mxGeometry height="130" width="250" x="890" y="529" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#37474F;" value="IAM Role: dcn-ecs-task-execution-role&#xa;• AmazonDynamoDBFullAccess&#xa;• AmazonS3FullAccess&#xa;• CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="80" width="250" x="890" y="674" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp5" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="5. S3 Lifecycle &amp;amp; DynamoDB NoSQL" vertex="1">
+          <mxGeometry height="740" width="260" x="1190" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-folders" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=11;fontColor=#E65100;" value="S3 Ready &amp;amp; Archive Folders&#xa;• ecommerce-data/orders/&#xa;• ecommerce-data/order_items/&#xa;• ecommerce-data/products/&#xa;• ecommerce-data/archived/" vertex="1">
+          <mxGeometry height="110" width="220" x="1210" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-ddb1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;" value="🗄️ DynamoDB Table 1&#xa;&lt;b&gt;category_wise_summary&lt;/b&gt;&#xa;• Hash Key: order_date&#xa;• Sort Key: category&#xa;• Metrics: daily_revenue, avg_order_value, avg_return_rate" vertex="1">
+          <mxGeometry height="140" width="220" x="1210" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-ddb2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;" value="🗄️ DynamoDB Table 2&#xa;&lt;b&gt;daily_order_summary&lt;/b&gt;&#xa;• Hash Key: order_date&#xa;• Metrics: total_orders, total_revenue, total_items_sold, return_rate, unique_customers" vertex="1">
+          <mxGeometry height="150" width="220" x="1210" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp6" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="6. Analytics &amp;amp; Serving" vertex="1">
+          <mxGeometry height="740" width="190" x="1470" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-dash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;" value="📊 Real-Time Dashboard&#xa;• Executive Revenue KPIs&#xa;• Category Trends&#xa;• Return Rate Alerts" vertex="1">
+          <mxGeometry height="140" width="150" x="1490" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#01579B;" value="🚀 Low-Latency APIs&#xa;• Sub-10ms Reads on DynamoDB Tables&#xa;• Serving E-Commerce Applications" vertex="1">
+          <mxGeometry height="140" width="150" x="1490" y="513" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c1" edge="1" parent="1" source="m-g1-s3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g1-eb" value="Object Created">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c2" edge="1" parent="1" source="m-g1-eb" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g2-sf" value="Fires Rule">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300.07" y="667.07" />
+              <mxPoint x="300.07" y="388" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" value="Launches Task 1">
+          <mxGeometry relative="1" x="0.0847" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="550.07" y="390" />
+              <mxPoint x="870.07" y="390" />
+              <mxPoint x="870.07" y="423.07" />
+            </Array>
+            <mxPoint x="550" y="397" as="sourcePoint" />
+            <mxPoint x="890" y="423" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c4" edge="1" parent="1" source="m-g3-img1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=1.5;dashed=1;" target="m-g4-t1" value="Pulls Image">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c5" edge="1" parent="1" source="m-g3-img2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=1.5;dashed=1;" target="m-g4-t2" value="Pulls Image">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c6" edge="1" parent="1" source="m-g4-t1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-folders" value="Validates &amp;amp; Moves">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c7" edge="1" parent="1" source="m-g4-t2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-ddb1" value="Upserts KPIs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c8" edge="1" parent="1" source="m-g5-ddb1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g6-dash" value="Queries Data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c9" edge="1" parent="1" source="m-g5-ddb2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g6-api" value="Queries Data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0lQKek0D8d3IXxnhMiyt-1" edge="1" parent="1" source="m-g4-t2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;exitX=0.989;exitY=0.653;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.567;entryDx=0;entryDy=0;entryPerimeter=0;" target="m-g5-ddb2" value="Upserts KPIs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="614" as="sourcePoint" />
+            <mxPoint x="1240" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-pipeline" name="Detailed Pipeline &amp; Container Workflow">
+    <mxGraphModel dx="1492" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pl-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="860" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Docker Containers Lifecycle &amp;amp; Detailed Data Processing Workflow" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c1-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3F51B5;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="350" width="1340" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c1-hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3F51B5;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="Container 1: ecom_data_validation (Task Definition: task-data-validation)" vertex="1">
+          <mxGeometry height="35" width="1340" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c1-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📥 s3://.../ecommerce-data/new/&#xa;• orders_YYYYMMDD.csv&#xa;• order_items_YYYYMMDD.csv&#xa;• products_YYYYMMDD.csv" vertex="1">
+          <mxGeometry height="90" width="240" x="103" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c1-logic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontColor=#1A237E;align=left;spacingLeft=15;" value="&lt;b&gt;Validation Container Logic:&lt;/b&gt;&lt;br&gt;1. Receives TASK_TOKEN environment variable from Step Functions.&lt;br&gt;2. Validates CSV schemas and exact column pandas dtypes.&lt;br&gt;3. Moves valid files to ready folders: orders/, order_items/, products/.&lt;br&gt;4. Invokes stepfunctions.send_task_success() with payload:&lt;br&gt;   {&quot;orders&quot;: 0|1, &quot;order_items&quot;: 0|1, &quot;products&quot;: 0|1}." vertex="1">
+          <mxGeometry height="160" width="460" x="406" y="223" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c1-out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📤 &lt;b&gt;S3 Ready Subfolders:&lt;/b&gt;&#xa;ecommerce-data/orders/ | order_items/ | products/" vertex="1">
+          <mxGeometry height="65" width="450" x="930" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c1-out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;align=left;spacingLeft=10;" value="🔑 &lt;b&gt;Step Functions Task Token Callback:&lt;/b&gt;&#xa;Returns $.taskOutput JSON to Choice State CheckCondition" vertex="1">
+          <mxGeometry height="65" width="450" x="930" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c2-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#009688;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="370" width="1340" x="80" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c2-hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#009688;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="Container 2: etl_aggregations (Task Definition: task-etl-calculations)" vertex="1">
+          <mxGeometry height="35" width="1340" x="80" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c2-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#1B5E20;" value="📥 Validated CSVs from S3:&#xa;• ecommerce-data/orders/&#xa;• ecommerce-data/order_items/&#xa;• ecommerce-data/products/" vertex="1">
+          <mxGeometry height="90" width="240" x="108" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c2-logic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontColor=#004D40;align=left;spacingLeft=15;" value="&lt;b&gt;ETL Aggregation Container Logic:&lt;/b&gt;&lt;br&gt;1. Reads validated CSVs via AWS Wrangler (awswrangler.s3.read_csv).&lt;br&gt;2. Performs inner join: orders + order_items + products.&lt;br&gt;3. Computes Category KPIs: daily revenue, avg order value, avg return rate.&lt;br&gt;4. Computes Daily Order KPIs: total revenue, orders, items sold, return rate.&lt;br&gt;5. Upserts KPI metrics directly into DynamoDB NoSQL tables.&lt;br&gt;6. Archives processed CSVs to ecommerce-data/archived." vertex="1">
+          <mxGeometry height="180" width="460" x="417" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c2-out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;align=left;spacingLeft=10;" value="🗄️ &lt;b&gt;DynamoDB Tables Upsert:&lt;/b&gt;&#xa;category_wise_summary &amp;amp; daily_order_summary" vertex="1">
+          <mxGeometry height="65" width="450" x="941" y="573" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c2-out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFEBE9;strokeColor=#8D6E63;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4E342E;align=left;spacingLeft=10;" value="📦 &lt;b&gt;S3 Archive Migration:&lt;/b&gt;&#xa;Moves processed CSV files to s3://.../ecommerce-data/archived/" vertex="1">
+          <mxGeometry height="65" width="450" x="944" y="749" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c1" edge="1" parent="1" source="pl-c1-in" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="pl-c1-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c2" edge="1" parent="1" source="pl-c1-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="pl-c1-out1" value="Moves Files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c3" edge="1" parent="1" source="pl-c1-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="pl-c1-out2" value="Sends Token">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c4" edge="1" parent="1" source="pl-c2-in" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="pl-c2-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c5" edge="1" parent="1" source="pl-c2-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="pl-c2-out1" value="Writes DynamoDB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-c6" edge="1" parent="1" source="pl-c2-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="pl-c2-out2" value="Archives CSVs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-stepfunctions" name="EventBridge">
+    <mxGraphModel dx="1989" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sf-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1520" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="AWS Step Functions State Machine Execution Workflow (&lt;b&gt;workflow-ecommerce-tasks&lt;/b&gt;)" vertex="1">
+          <mxGeometry height="36" width="1200" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-panel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C71325;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="820" width="1520" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C71325;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="Step Functions DAG Workflow &amp;amp; Conditional Task Execution" vertex="1">
+          <mxGeometry height="40" width="1520" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="EventBridge Trigger&#xa;(S3 Object Created)" vertex="1">
+          <mxGeometry height="60" width="240" x="680" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-step1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;align=left;spacingLeft=15;" value="1. &lt;b&gt;DataValidation&lt;/b&gt; (Type: Task)&#xa;Resource: arn:aws:states:::ecs:runTask.sync&#xa;• Cluster: dcn-ecommerce-data-cluster&#xa;• TaskDefinition: task-data-validation:2 (FARGATE)&#xa;• Overrides: TASK_TOKEN = $$.Task.Token&#xa;• ResultPath: $.taskOutput" vertex="1">
+          <mxGeometry height="110" width="440" x="580" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-step2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;align=center;" value="2. &lt;b&gt;CheckCondition&lt;/b&gt;&#xa;(Type: Choice)&#xa;orders=1 AND order_items=1&#xa;AND products=1?" vertex="1">
+          <mxGeometry height="160" width="320" x="640" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-step3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#004D40;align=left;spacingLeft=15;" value="3. &lt;b&gt;InvokeSecondTask&lt;/b&gt; (Type: Task)&#xa;Resource: arn:aws:states:::ecs:runTask.sync&#xa;• Cluster: dcn-ecommerce-data-cluster&#xa;• TaskDefinition: task-etl-calculations:1 (FARGATE)&#xa;• Executes joins, DynamoDB upserts &amp;amp; archiving" vertex="1">
+          <mxGeometry height="100" width="420" x="960" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-step4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C71325;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;align=left;spacingLeft=15;" value="4. &lt;b&gt;EndState&lt;/b&gt; (Type: Pass)&#xa;• Pipeline Aborted: Input datasets incomplete/invalid&#xa;• Prevents partial KPI writes to DynamoDB" vertex="1">
+          <mxGeometry height="80" width="380" x="260" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-end-success" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#512DA8;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="Workflow Completed Successfully" vertex="1">
+          <mxGeometry height="50" width="240" x="1050" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-end-aborted" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="Workflow Aborted (Incomplete Data)" vertex="1">
+          <mxGeometry height="50" width="240" x="330" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-c1" edge="1" parent="1" source="sf-start" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-step1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-c2" edge="1" parent="1" source="sf-step1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-step2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-c3" edge="1" parent="1" source="sf-step2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#388E3C;strokeWidth=2.5;" target="sf-step3" value="All Datasets Valid (True)">
+          <mxGeometry relative="1" x="0.403" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1170" y="525" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sf-c4" edge="1" parent="1" source="sf-step2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#C71325;strokeWidth=2.5;" target="sf-step4" value="Default / Incomplete (False)">
+          <mxGeometry relative="1" x="0.3231" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="450" y="525" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sf-c5" edge="1" parent="1" source="sf-step3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-end-success" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-c6" edge="1" parent="1" source="sf-step4" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-end-aborted" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-techstack" name="AWS Tech Stack &amp; Services">
+    <mxGraphModel dx="1492" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ts-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#232F3E;" value="AWS Services &amp;amp; Infrastructure Specifications Overview" vertex="1">
+          <mxGeometry height="40" width="800" x="400" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="Use case: Event-Driven E-Commerce Pipeline using EventBridge, Step Functions, ECS Fargate &amp;amp; DynamoDB" vertex="1">
+          <mxGeometry height="25" width="900" x="350" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-group" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="AWS Services Breakdown &amp;amp; Infrastructure Configurations" vertex="1">
+          <mxGeometry height="880" width="1120" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-1-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#E65100;" value="1: Amazon EventBridge" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-1-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Event Trigger Router&lt;/b&gt;&#xa;• Rule: trigger-stepfunctions-ecs-tasks&#xa;• Event Pattern: aws.s3 Object Created on ecommerce-data/new/order_items" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#B71C1C;" value="2: AWS Step Functions" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;State Machine Orchestration&lt;/b&gt;&#xa;• State Machine: workflow-ecommerce-tasks&#xa;• Pattern: waitForTaskToken callback + Choice conditional branching" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#311B92;" value="3: AWS ECS Fargate Cluster" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Serverless Container Compute&lt;/b&gt;&#xa;• Cluster: dcn-ecommerce-data-cluster&#xa;• Task Defs: task-data-validation:2 &amp;amp; task-etl-calculations:1" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#4A148C;" value="4: Amazon ECR Registry" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Docker Image Repository&lt;/b&gt;&#xa;• Repository: dcn-ecommerce-pipelines&#xa;• Image Tags: ecom_data_validation &amp;amp; etl_aggregations" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-5-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#01579B;" value="5: Amazon S3 Data Lake" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-5-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Cloud Object Lifecycle Storage&lt;/b&gt;&lt;br&gt;• Bucket: s3://dcn-dataengg/&lt;br&gt;• Stages: ecommerce-data/new/ → ready folders → ecommerce-data/archived/" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-6-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#37474F;" value="6: Amazon DynamoDB" vertex="1">
+          <mxGeometry height="75" width="340" x="40" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-6-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Low-Latency NoSQL KPI Store&lt;/b&gt;&#xa;• Table 1: category_wise_summary (Hash Key: order_date, Sort Key: category)&#xa;• Table 2: daily_order_summary (Hash Key: order_date)" vertex="1">
+          <mxGeometry height="75" width="670" x="410" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-7-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1A237E;" value="7: IAM Security Roles" vertex="1">
+          <mxGeometry height="80" width="340" x="40" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-7-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Security Governance &amp;amp; Access Control&lt;/b&gt;&#xa;• ECS Task Role: dcn-ecs-task-execution-role (DynamoDB, S3, CloudWatch, Step Functions callback)&#xa;• Step Functions Role: dcn-dataengg-stepfunc-ecs-role (AmazonECS_FullAccess)" vertex="1">
+          <mxGeometry height="80" width="670" x="410" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-8-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1B5E20;" value="8: Docker ETL &amp;amp; Validation Logic" vertex="1">
+          <mxGeometry height="95" width="340" x="40" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-8-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Container Python Logic&lt;/b&gt;&#xa;• Validation: pandas dtypes verification, file relocation, task token callback&#xa;• Aggregations: AWS Wrangler S3 read, 3-table join, category &amp;amp; daily KPI calculation, DynamoDB write" vertex="1">
+          <mxGeometry height="95" width="670" x="410" y="660" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

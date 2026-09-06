@@ -1,0 +1,30 @@
+Infra created for this project
+
+1. S3 bucket - dcn-dataengg 
+    a. Spark scripts folder - spark-scripts
+    b. data folder - rental_vehicles
+    c. output folder as data lake- rental_vehicles/outputs 
+2. Spark scripts
+    a. spark-agg1.py
+    b. spark-agg2.py
+3. EMR clusters
+    a. EMR - on EC2 for long term workload scenarios.
+    b. EMR - Severless for Transient workloads.
+4. Glue Crawlers for Schema and Metadata of the files in S3 bucket.
+    a. location_performance_metrics_crawler
+    b. transaction_metrics_crawler
+    c. user_metrics_crawler
+    d. vehicle_performance_metrics_crawler
+5. Glue Data Catalog to store in rental-apartments-db.
+6. Athena to run queries directly on S3 data.
+7. IAM rols for glue job. Dynamodb full access, S3 full access, secret manager read access and Cloudwatch even full access.
+8. Step Functions for EMR on EC2
+    a. State Machine - workflow-rental-vehicles-emr
+    b. IAM Role - dcn-dataengg-stepfunctions (AmazonEMRServicePolicy_v2, AmazonS3FullAccess, EC2fullaccess and CloudWatchLogsFullAccess)
+    c. IAM pass role with inline - file execution-policy-step-functions.json
+    d. Code - step-functions-emr.json
+9. Step Functions for EMR Severless
+    a. State Machine - workflow-rental-vehicles-emrserverless
+    b. IAM Role - dcn-dataengg-stepfunctions (AmazonEMRServicePolicy_v2, AmazonS3FullAccess, EC2fullaccess and CloudWatchLogsFullAccess)
+    c. IAM pass role with inline - file emr-serverless-trust-policy.json
+    d. Code - step-functions-emr-serverless.json

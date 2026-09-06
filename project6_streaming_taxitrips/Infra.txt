@@ -1,0 +1,17 @@
+Infra created for this project
+
+1. Kinesis stream
+    a. trip_start_stream
+    b. trip_end_stream
+2. S3 Bucket - dcn-dataengg
+   folder - taxi_trips
+3. DynamoDB
+    a. trip_details table
+        - primary key: trip_id
+4. Lambda IAM role - dcn-dataengg-streaming-lambda 
+   Permissions - AmazonDynamoDBFullAccess, AmazonKinesisFullAccess, AWSGlueConsoleFullAccess, CloudWatchLogsFullAccess
+5. Lambda functions
+    a. trip-start-processing - Process kinesis stream trip_start_stream and write in DynamoDB
+    b. trip-end-processing - Update the DynamoDB for same Trip ID and Trigeer Glue Job
+6. Glue Job
+    a. process_completed_trips - Process the DynamoDB table data and write in S3.

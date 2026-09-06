@@ -1,0 +1,24 @@
+Infra created for this project
+
+1. ECS cluster - dcn-ecommerce-data-cluster
+2. ECR Repo - dcn-ecommerce-pipelines
+3. Docker images
+    a. Data validity - ecom_data_validation
+    b. Data aggregation - etl_aggregations
+4. DyanmoDB 
+    a. category_wise_summary with hash key order_date
+    b. daily_order_summary with hash key order_date
+5. Task Defintions 
+    a. task-data-validation
+    b. task-etl-calculations
+6. S3 bucket
+    a. Project Data bucket
+7. IAM roles 
+    a. dcn-ecs-task-execution-role - AmazonDynamoDBFullAccess, AmazonECSTaskExecutionRolePolicy, AmazonS3FullAccess, CloudWatchLogsFullAccess, inline policy for step functions
+    b. dcn-dataengg-stepfunc-ecs-role - AmazonECS_FullAccess, CloudWatchLogsFullAccess
+8. Step Functions
+    a. State Machine - workflow-ecommerce-tasks
+    b. Code - step-functions.json
+9. Eventbridge rule
+    a. triggger-stepfunctions-ecs-tasks
+    b. pattern - event-pattern.json

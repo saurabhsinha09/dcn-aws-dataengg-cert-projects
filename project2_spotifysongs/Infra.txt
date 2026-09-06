@@ -1,0 +1,11 @@
+Infra created for this project
+
+1. IAM rols for glue job. Dynamodb full access, S3 full access and Cloudwatch even full access.
+2. Two glue jobs.
+    a. SPark job - calculate_metrics_etl
+    b. Python Job - insert_metrics_dynamo
+3. Two S3 buckets
+    a. Airflow bucket for DAGS and Requirement.
+    b. Project Data bucket
+4. AWS managed Airflow with public endpoint of mw1.small.
+5. AWS Dynamo DB Table - track_level_reports with Hash Key track_id and Range Key report_date.

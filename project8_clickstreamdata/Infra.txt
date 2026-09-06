@@ -1,0 +1,16 @@
+Infra created for this project
+
+1. Serverless Redshift
+    a. Database - clickstream_db
+    b. Schema - prod_schema
+    c. Table - events
+2. Lambda 
+    a. clickstream_events_enrichment - Data transformation for Kinesis firehose stream data.
+3. Kinesis stream
+    a. app_clickstream_events
+    b. execute kinesis-events-producer.py for data ingestion
+4. Kinesis Firehose
+    a. KDS-RED-Event
+    b. Source - Kinesis stream app_clickstream_events
+    c. Desination - Redshift clickstream_db
+    d. Staging - S3 Bucket dcn-dataengg

@@ -1,0 +1,29 @@
+# Use an official Python runtime as a parent image
+#FROM python:3.9
+#WORKDIR /app
+#COPY . /app
+#RUN pip install -r requirements.txt
+#EXPOSE 5002
+#CMD ["streamlit","run","app.py"]
+
+FROM python:3.11-alpine
+
+WORKDIR /app
+
+# Install system dependencies required to build C/C++ extensions for Streamlit on Alpine
+RUN apk add --no-cache \
+    build-base \
+    gcc \
+    g++ \
+    linux-headers
+
+# Copy requirements first to leverage Docker layer caching
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application source code
+COPY . .
+
+# Expose port and configure Streamlit to bind to 0.0.0.0 on port 5002
+EXPOSE 5002
+CMD ["streamlit", "run", "app.py", "--server.port=5002", "--server.address=0.0.0.0"]

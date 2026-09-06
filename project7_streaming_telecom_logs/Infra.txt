@@ -1,0 +1,25 @@
+Infra created for this project
+
+1. 1. Kinesis stream
+    a. mobile_coverage_logs
+    b. execute kinesis-producer.py for data ingestion
+2. S3 Bucket - dcn-dataengg
+   folder - telecom_logs
+3. Glue job - 
+    a. spark streaming job - network_streaming_logs
+    b. aggregation data in S3 bucket
+4. Glue Crawler
+    a. catalog db - mobile_network_aggregations
+    b. signal_strength_by_operator_crawler 
+    c. gps_precision_by_provider_crawler
+    d. status_count_crawler
+
+5. ECS cluster - dcn-telecom-data-cluster
+6. ECR Repo - telecom-provider-app
+7. Docker image
+    a. Streamlit app - mobile-monitor-app
+8. Task Defintions 
+    a. task-telecom-network-monitor
+7. IAM roles 
+    a. dcn-ecs-task-execution-role - AmazonDynamoDBFullAccess, AmazonECSTaskExecutionRolePolicy, AmazonS3FullAccess, CloudWatchLogsFullAccess, inline policy for step functions
+    b. dcn-dataengg-glue-role - AmazonKinesisFullAccess, AmazonS3FullAccess, AWSGlueServiceRole, CloudWatchLogsFullAccess

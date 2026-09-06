@@ -1,0 +1,534 @@
+<mxfile host="app.diagrams.net" agent="Antigravity AI Agent" pages="5">
+  <diagram id="page-overview" name="Overview">
+    <mxGraphModel dx="2984" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ov-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="760" width="1350" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1350" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Use case: Rental Vehicles Big Data Pipeline using &lt;b&gt;Amazon EMR (PySpark)&lt;/b&gt;, &lt;b&gt;Step Functions&lt;/b&gt;, &lt;b&gt;Glue Catalog&lt;/b&gt; &amp;amp; &lt;b&gt;Athena&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E05243;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="230" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="160" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#E05243;fontFace=Arial;align=center;" value="Amazon S3&#xa;Raw Data Storage" vertex="1">
+          <mxGeometry height="40" width="210" x="80" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;s3://.../rental_vehicles/&lt;/b&gt;&#xa;• rental_transactions.csv&#xa;• vehicles.csv&#xa;• users.csv&#xa;• locations.csv" vertex="1">
+          <mxGeometry height="80" width="210" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-src-scripts" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1;fontSize=11;fontColor=#E65100;fontFace=Arial;" value="&lt;b&gt;Spark Scripts Folder:&lt;/b&gt;&#xa;s3://.../spark-scripts/&#xa;(spark-agg1.py, spark-agg2.py)" vertex="1">
+          <mxGeometry height="50" width="210" x="80" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C71325;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="240" x="385" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.step_functions;labelBackgroundColor=none;sketch=0;fillColor=#C71325;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="480" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#C71325;fontFace=Arial;align=center;" value="AWS Step Functions&#xa;Orchestration Engine" vertex="1">
+          <mxGeometry height="40" width="220" x="395" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-orch-desc" parent="1" style="text;html=1;fontSize=11;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;State Machines:&lt;/b&gt;&#xa;1. &lt;b&gt;workflow-rental-vehicles-emr&lt;/b&gt;&#xa;   (Create Cluster → Job 1 → Job 2 → Terminate)&#xa;2. &lt;b&gt;workflow-rental-vehicles-emrserverless&lt;/b&gt;&#xa;   (Run Job 1 → Run Job 2)" vertex="1">
+          <mxGeometry height="140" width="220" x="392" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-emr-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="260" x="736" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-emr-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.emr;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="841" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-emr-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="Amazon EMR (PySpark)&#xa;Processing Compute" vertex="1">
+          <mxGeometry height="40" width="240" x="746" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-emr-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Dual Deployment Modes:&lt;/b&gt;&#xa;• &lt;b&gt;EMR on EC2:&lt;/b&gt; Persistent Cluster&#xa;  (1 Master + 1 Core m5.xlarge)&#xa;• &lt;b&gt;EMR Serverless:&lt;/b&gt; Transient Workload&#xa;  (App ID: 00g7s5rb6tktcf1t)&#xa;&#xa;&lt;b&gt;PySpark Jobs:&lt;/b&gt;&#xa;• Job 1: spark-agg1.py&#xa;• Job 2: spark-agg2.py" vertex="1">
+          <mxGeometry height="140" width="240" x="746" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-out-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E05243;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="240" x="1121" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-out-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1216" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-out-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#E05243;fontFace=Arial;align=center;" value="Amazon S3 Data Lake&#xa;Parquet Datasets" vertex="1">
+          <mxGeometry height="40" width="220" x="1131" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-out-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;s3://.../rental_vehicles/output/&lt;/b&gt;&#xa;• &lt;b&gt;transaction_metrics/&lt;/b&gt;&#xa;• &lt;b&gt;user_metrics/&lt;/b&gt;&#xa;• &lt;b&gt;location_performance_metrics/&lt;/b&gt;&#xa;• &lt;b&gt;vehicle_performance_metrics/&lt;/b&gt;" vertex="1">
+          <mxGeometry height="140" width="220" x="1131" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-cat-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="290" width="860" x="360" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="390" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=left;" value="AWS Glue Crawlers &amp;amp; Data Catalog" vertex="1">
+          <mxGeometry height="30" width="350" x="465" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Glue Catalog Database:&lt;/b&gt; rental-vehicles-db&#xa;&lt;b&gt;4 Automated Crawlers:&lt;/b&gt;&#xa;1. location_performance_metrics_crawler&#xa;2. transaction_metrics_crawler&#xa;3. user_metrics_crawler&#xa;4. vehicle_performance_metrics_crawler" vertex="1">
+          <mxGeometry height="90" width="350" x="465" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-athena-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.athena;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="840" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-athena-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=left;" value="Amazon Athena" vertex="1">
+          <mxGeometry height="30" width="300" x="915" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-athena-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Interactive Serverless Analytics:&lt;/b&gt;&lt;br&gt;Executes direct SQL queries against S3 Parquet Data Lake&amp;nbsp;&lt;div&gt;using Glue Catalog metadata schemas.&amp;nbsp;&lt;/div&gt;&lt;div&gt;Zero infrastructure setup.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="320" x="840" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-footer-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=1;fontSize=12;fontStyle=1;fontColor=#4A148C;fontFace=Arial;" value="Automated Orchestration &amp;amp; Fault-Tolerant Execution via AWS Step Functions State Machines" vertex="1">
+          <mxGeometry height="40" width="800" x="390" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-conn1" edge="1" parent="1" source="ov-src-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-orch-box" value="Input Data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-conn2" edge="1" parent="1" source="ov-orch-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-emr-box" value="Orchestrates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-conn3" edge="1" parent="1" source="ov-emr-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-out-box" value="Writes Parquet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-conn4" edge="1" parent="1" source="ov-out-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;exitX=-0.004;exitY=0.786;exitDx=0;exitDy=0;exitPerimeter=0;" target="ov-cat-container" value="Schema Discovery">
+          <mxGeometry relative="1" x="-0.2364" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="1020.07" y="360.13" />
+              <mxPoint x="1020.07" y="450" />
+              <mxPoint x="790.07" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-master" name="Master System Architecture">
+    <mxGraphModel dx="1989" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1620" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🚗 Rental Vehicles Data Engineering Architecture: S3 Raw → Step Functions → EMR PySpark → Parquet Data Lake → Glue Catalog → Athena SQL" vertex="1">
+          <mxGeometry height="36" width="1350" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="End-to-End Big Data Analytics Pipeline for Rental Vehicle Transactions, Users, Locations, and Fleet Performance Metrics" vertex="1">
+          <mxGeometry height="25" width="1000" x="350" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp1" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="1. Source Layer (Amazon S3)" vertex="1">
+          <mxGeometry height="740" width="240" x="40" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontColor=#E65100;" value="S3 Input Folder&lt;br&gt;s3://dcn-dataengg/&lt;br&gt;rental_vehicles/" vertex="1">
+          <mxGeometry height="70" width="200" x="60" y="281" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-f1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=11;fontColor=#263238;align=left;spacingLeft=10;" value="📄 &lt;b&gt;rental_transactions.csv&lt;/b&gt;&#xa;(transaction_id, user_id, vehicle_id, pickup, dropoff, start_time, end_time, amount, status)" vertex="1">
+          <mxGeometry height="65" width="200" x="60" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-f2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=11;fontColor=#263238;align=left;spacingLeft=10;" value="📄 &lt;b&gt;vehicles.csv&lt;/b&gt;&#xa;(vehicle_id, make, model, year, vehicle_type, daily_rate, status)" vertex="1">
+          <mxGeometry height="55" width="200" x="60" y="441" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-f3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=11;fontColor=#263238;align=left;spacingLeft=10;" value="📄 &lt;b&gt;users.csv&lt;/b&gt;&#xa;(user_id, first_name, last_name, email, membership_tier, signup_date)" vertex="1">
+          <mxGeometry height="55" width="200" x="60" y="506" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-f4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=11;fontColor=#263238;align=left;spacingLeft=10;" value="📄 &lt;b&gt;locations.csv&lt;/b&gt;&#xa;(location_id, location_name, city, state, zip_code, capacity)" vertex="1">
+          <mxGeometry height="55" width="200" x="60" y="571" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-scripts" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#EFEBE9;strokeColor=#8D6E63;strokeWidth=2;fontSize=12;fontColor=#4E342E;" value="Spark Scripts Location&lt;br&gt;s3://dcn-dataengg/&lt;br&gt;spark-scripts/&lt;br&gt;• spark-agg1.py&lt;br&gt;• spark-agg2.py" vertex="1">
+          <mxGeometry height="110" width="200" x="60" y="641" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp2" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="2. Orchestration Layer (Step Functions)" vertex="1">
+          <mxGeometry height="740" width="260" x="310" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-sf1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="⚡ State Machine 1&#xa;&lt;b&gt;workflow-rental-vehicles-emr&lt;/b&gt;&#xa;(EMR on EC2 Workflow)&#xa;---------------------------------&#xa;1. CreateEMRCluster.sync&#xa;2. AddSparkJob1.sync&#xa;3. AddSparkJob2.sync&#xa;4. TerminateCluster.sync" vertex="1">
+          <mxGeometry height="140" width="220" x="330" y="283" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-catch" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=1.5;fontSize=11;fontColor=#E65100;" value="⚠️ Catch: States.ALL&#xa;Routes job failures to TerminateCluster to prevent idle cost" vertex="1">
+          <mxGeometry height="50" width="220" x="330" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-sf2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="⚡ State Machine 2&#xa;&lt;b&gt;workflow-rental-vehicles-emrserverless&lt;/b&gt;&#xa;(EMR Serverless Workflow)&#xa;---------------------------------&#xa;1. RunSparkJob1.sync&#xa;2. RunSparkJob2.sync" vertex="1">
+          <mxGeometry height="120" width="220" x="330" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#37474F;" value="IAM Role: dcn-dataengg-stepfunctions&#xa;• AmazonEMRServicePolicy_v2&#xa;• AmazonS3FullAccess&#xa;• EC2FullAccess&#xa;• CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="110" width="220" x="330" y="643" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp3" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="3. Compute Engine (Amazon EMR)" vertex="1">
+          <mxGeometry height="740" width="280" x="600" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-ec2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="🔥 Amazon EMR on EC2 Cluster&#xa;(Release: emr-spark-8.0.0)&#xa;• Master Node: 1x m5.xlarge&#xa;• Core Node: 1x m5.xlarge&#xa;• Roles: dcn-dataengg-emr-ec2role &amp;amp;&#xa;  dcn-dataengg-emr-servicerole" vertex="1">
+          <mxGeometry height="120" width="240" x="620" y="243" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-sl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="⚡ Amazon EMR Serverless App&#xa;(App ID: 00g7s5rb6tktcf1t)&#xa;• Auto-scaling serverless Spark&#xa;• Role: dcn-dataengg-emr-serverless-role" vertex="1">
+          <mxGeometry height="90" width="240" x="620" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-j1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;" value="⚙️ PySpark Job 1: spark-agg1.py&#xa;(TransactionUserAnalysis)&#xa;• Parses transaction timestamps &amp;amp; duration&#xa;• Joins transactions with users&#xa;• Tumbling 1-day daily transaction KPIs&#xa;• User total revenue &amp;amp; spending metrics" vertex="1">
+          <mxGeometry height="120" width="240" x="620" y="491" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-j2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;" value="⚙️ PySpark Job 2: spark-agg2.py&#xa;(VehicleLocationPerformance)&#xa;• Joins transactions → locations → vehicles&#xa;• Per-location revenue &amp;amp; utilization KPIs&#xa;• Per-vehicle-type revenue &amp;amp; duration KPIs" vertex="1">
+          <mxGeometry height="110" width="240" x="620" y="643" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp4" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="4. Data Lake Layer (Amazon S3 Output)" vertex="1">
+          <mxGeometry height="740" width="250" x="910" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontColor=#E65100;" value="S3 Output Data Lake Folder&lt;br&gt;s3://dcn-dataengg/&lt;br&gt;rental_vehicles/output/" vertex="1">
+          <mxGeometry height="70" width="210" x="930" y="272" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📊 &lt;b&gt;transaction_metrics/&lt;/b&gt;&#xa;(Parquet format, daily KPIs: total_txns, revenue, avg_value, max/min/avg_duration)" vertex="1">
+          <mxGeometry height="65" width="210" x="930" y="357" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📊 &lt;b&gt;user_metrics/&lt;/b&gt;&#xa;(Parquet format, per-user KPIs: total_user_txns, user_revenue, avg_user_spending)" vertex="1">
+          <mxGeometry height="65" width="210" x="930" y="432" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-out3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📊 &lt;b&gt;location_performance_metrics/&lt;/b&gt;&#xa;(Parquet format, per-location KPIs: location_revenue, unique_vehicles)" vertex="1">
+          <mxGeometry height="65" width="210" x="930" y="549" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-out4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📊 &lt;b&gt;vehicle_performance_metrics/&lt;/b&gt;&#xa;(Parquet format, per-vehicle-type KPIs: type_revenue, avg_duration)" vertex="1">
+          <mxGeometry height="65" width="210" x="930" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp5" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="5. Schema Catalog (AWS Glue)" vertex="1">
+          <mxGeometry height="740" width="240" x="1190" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-crawlers" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4A148C;" value="🔍 AWS Glue Crawlers&#xa;---------------------------------&#xa;1. transaction_metrics_crawler&#xa;2. user_metrics_crawler&#xa;3. location_performance_metrics_crawler&#xa;4. vehicle_performance_metrics_crawler" vertex="1">
+          <mxGeometry height="160" width="220" x="1200" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-cat" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="🗄️ AWS Glue Data Catalog&#xa;Database: &lt;b&gt;rental-vehicles-db&lt;/b&gt;&#xa;Stores schema metadata &amp;amp; table partitions for Athena" vertex="1">
+          <mxGeometry height="130" width="200" x="1210" y="511" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp6" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="6. Analytics (Amazon Athena)" vertex="1">
+          <mxGeometry height="740" width="210" x="1460" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-athena" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#01579B;" value="⚡ Amazon Athena&#xa;Serverless SQL Engine&#xa;---------------------------------&#xa;Executes direct SQL queries against Parquet files in S3 using Glue Catalog table DDLs" vertex="1">
+          <mxGeometry height="160" width="170" x="1480" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-bi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;" value="📈 Business Intelligence&#xa;&amp;amp; Analytical Reporting&#xa;• Executive Dashboards&#xa;• Fleet Utilization Reports&#xa;• Revenue Insights" vertex="1">
+          <mxGeometry height="130" width="170" x="1480" y="513" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c1" edge="1" parent="1" source="m-g1-s3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g2-sf1" value="Data Source">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c2" edge="1" parent="1" source="m-g2-sf1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g3-ec2" value="Orchestrates EC2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c3" edge="1" parent="1" source="m-g2-sf2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g3-sl" value="Orchestrates Serverless">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590.07" y="568.07" />
+              <mxPoint x="590.07" y="400.07" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c4" edge="1" parent="1" source="m-g3-j1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="m-g4-out1" value="Writes Parquet">
+          <mxGeometry relative="1" x="-0.1458" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="890.07" y="551" />
+              <mxPoint x="890.07" y="390.07" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c5" edge="1" parent="1" source="m-g3-j2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="m-g4-out3" value="Writes Parquet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900.07" y="698.07" />
+              <mxPoint x="900.07" y="581.53" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c6" edge="1" parent="1" source="m-g4-s3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-crawlers" value="Scans Schema">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c7" edge="1" parent="1" source="m-g5-crawlers" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-cat" value="Populates Catalog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c8" edge="1" parent="1" source="m-g5-cat" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;exitX=1;exitY=0;exitDx=0;exitDy=40;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="m-g6-athena" value="Provides Schema">
+          <mxGeometry relative="1" x="-0.2455" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1450.07" y="551" />
+              <mxPoint x="1450.07" y="328.07" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c9" edge="1" parent="1" source="m-g6-athena" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g6-bi" value="Serves Queries">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-jobflow" name="Detailed Job &amp; Data Flow">
+    <mxGraphModel dx="2295" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jf-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="860" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="PySpark Jobs Transformation &amp;amp; Aggregation Data Flow" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j1-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3F51B5;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="350" width="1340" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j1-hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3F51B5;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="PySpark Job 1: spark-agg1.py (Transaction &amp;amp; User Metrics)" vertex="1">
+          <mxGeometry height="35" width="1340" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j1-in1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📥 s3://.../rental_transactions.csv&#xa;(rental_start_time, rental_end_time,&#xa;total_amount, user_id, vehicle_id)" vertex="1">
+          <mxGeometry height="65" width="240" x="110" y="189" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j1-in2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📥 s3://.../users.csv&#xa;(user_id, first_name, last_name,&#xa;email, membership_tier)" vertex="1">
+          <mxGeometry height="65" width="240" x="110" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j1-logic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontColor=#1A237E;align=left;spacingLeft=15;" value="&lt;b&gt;Spark Transformation Logic:&lt;/b&gt;&#xa;1. Convert rental_start_time &amp;amp; rental_end_time to timestamps.&#xa;2. Compute &lt;b&gt;duration_hours&lt;/b&gt; = (end_time - start_time) / 3600.&#xa;3. Join transactions with users on &lt;b&gt;user_id&lt;/b&gt;.&#xa;4. Group by tumbling 1-day window on start_time for daily KPIs.&#xa;5. Group by user_id for user lifetime revenue &amp;amp; spending KPIs." vertex="1">
+          <mxGeometry height="155" width="460" x="420" y="219" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j1-out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📤 &lt;b&gt;output/transaction_metrics/&lt;/b&gt;&#xa;(total_transactions, total_revenue, avg_transaction_value, max/min/avg_rental_duration)" vertex="1">
+          <mxGeometry height="65" width="450" x="930" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j1-out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📤 &lt;b&gt;output/user_metrics/&lt;/b&gt;&#xa;(total_user_transactions, user_total_revenue, avg_user_spending, total_user_rental_hours)" vertex="1">
+          <mxGeometry height="65" width="450" x="930" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#009688;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="370" width="1340" x="80" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#009688;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="PySpark Job 2: spark-agg2.py (Vehicle &amp;amp; Location Performance)" vertex="1">
+          <mxGeometry height="35" width="1340" x="80" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-in1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=11;fontStyle=1;fontColor=#E65100;" value="📥 s3://.../rental_transactions.csv" vertex="1">
+          <mxGeometry height="45" width="240" x="110" y="563" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-in2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=11;fontStyle=1;fontColor=#E65100;" value="📥 s3://.../locations.csv" vertex="1">
+          <mxGeometry height="45" width="240" x="110" y="667" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-in3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=11;fontStyle=1;fontColor=#E65100;" value="📥 s3://.../vehicles.csv" vertex="1">
+          <mxGeometry height="45" width="240" x="110" y="782" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-logic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontColor=#004D40;align=left;spacingLeft=15;" value="&lt;b&gt;Spark Transformation Logic:&lt;/b&gt;&#xa;1. Perform inner joins: transactions → locations (on pickup_location = location_id) → vehicles (on vehicle_id).&#xa;2. Compute &lt;b&gt;location_performance_metrics&lt;/b&gt;: Group by location_id (revenue, total txns, avg txn amount, unique vehicles count).&#xa;3. Compute &lt;b&gt;vehicle_performance_metrics&lt;/b&gt;: Group by vehicle_type (revenue, total txns, avg duration, max/min txns)." vertex="1">
+          <mxGeometry height="193" width="460" x="420" y="592" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📤 &lt;b&gt;output/location_performance_metrics/&lt;/b&gt;&#xa;(location_total_revenue, location_total_transactions, avg_transaction_amount_at_location, unique_vehicles_used)" vertex="1">
+          <mxGeometry height="65" width="450" x="955" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-j2-out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📤 &lt;b&gt;output/vehicle_performance_metrics/&lt;/b&gt;&#xa;(type_total_revenue, type_total_transactions, avg_transaction_amount_by_type, avg_rental_duration_by_type)" vertex="1">
+          <mxGeometry height="65" width="450" x="947" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c1" edge="1" parent="1" source="jf-j1-in1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="jf-j1-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c2" edge="1" parent="1" source="jf-j1-in2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="jf-j1-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c3" edge="1" parent="1" source="jf-j1-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="jf-j1-out1" value="Writes Parquet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c4" edge="1" parent="1" source="jf-j1-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="jf-j1-out2" value="Writes Parquet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c5" edge="1" parent="1" source="jf-j2-in1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="jf-j2-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c6" edge="1" parent="1" source="jf-j2-in2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="jf-j2-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c7" edge="1" parent="1" source="jf-j2-in3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="jf-j2-logic" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380.08" y="804.46" />
+              <mxPoint x="380.08" y="736.77" />
+            </Array>
+            <mxPoint x="410" y="674.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jf-c8" edge="1" parent="1" source="jf-j2-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="jf-j2-out1" value="Writes Parquet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jf-c9" edge="1" parent="1" source="jf-j2-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="jf-j2-out2" value="Writes Parquet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-stepfunctions" name="Step Functions Orchestration">
+    <mxGraphModel dx="2487" dy="997" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sf-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1520" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="AWS Step Functions Orchestration State Machines &amp;amp; Execution DAG Workflows" vertex="1">
+          <mxGeometry height="36" width="1200" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-panel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C71325;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="820" width="730" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C71325;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="State Machine 1: workflow-rental-vehicles-emr (EMR on EC2)" vertex="1">
+          <mxGeometry height="40" width="730" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="Start Workflow Execution" vertex="1">
+          <mxGeometry height="50" width="220" x="228" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-step1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;align=left;spacingLeft=15;" value="1. &lt;b&gt;CreateEMRCluster&lt;/b&gt;&#xa;Resource: elasticmapreduce:createCluster.sync&#xa;• Release: emr-spark-8.0.0&#xa;• Master Node: 1x m5.xlarge (On-Demand)&#xa;• Core Node: 1x m5.xlarge (On-Demand)" vertex="1">
+          <mxGeometry height="90" width="340" x="168" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-step2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;align=left;spacingLeft=15;" value="2. &lt;b&gt;AddSparkJob1&lt;/b&gt;&#xa;Resource: elasticmapreduce:addStep.sync&#xa;• Jar: command-runner.jar&#xa;• Args: spark-submit --deploy-mode cluster&#xa;  s3://.../spark-scripts/spark-agg1.py" vertex="1">
+          <mxGeometry height="90" width="340" x="168" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-step3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;align=left;spacingLeft=15;" value="3. &lt;b&gt;AddSparkJob2&lt;/b&gt;&#xa;Resource: elasticmapreduce:addStep.sync&#xa;• Jar: command-runner.jar&#xa;• Args: spark-submit --deploy-mode cluster&#xa;  s3://.../spark-scripts/spark-agg2.py" vertex="1">
+          <mxGeometry height="90" width="340" x="168" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-step4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C71325;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;align=left;spacingLeft=15;" value="4. &lt;b&gt;TerminateCluster&lt;/b&gt;&#xa;Resource: elasticmapreduce:terminateCluster.sync&#xa;• Terminates EMR cluster to avoid idle costs" vertex="1">
+          <mxGeometry height="70" width="340" x="168" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#512DA8;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="End Workflow Execution" vertex="1">
+          <mxGeometry height="50" width="220" x="228" y="785" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-catch-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=1.5;fontSize=11;fontColor=#E65100;" value="⚠️ Catch: States.ALL&#xa;Routes job failures directly to TerminateCluster" vertex="1">
+          <mxGeometry height="50" width="160" x="590" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-panel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#009688;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="820" width="730" x="830" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#009688;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="State Machine 2: workflow-rental-vehicles-emrserverless (EMR Serverless)" vertex="1">
+          <mxGeometry height="40" width="730" x="830" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="Start Workflow Execution" vertex="1">
+          <mxGeometry height="50" width="220" x="1085" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-step1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#004D40;align=left;spacingLeft=15;" value="1. &lt;b&gt;RunSparkJob1&lt;/b&gt;&#xa;Resource: emr-serverless:startJobRun.sync&#xa;• App ID: 00g7s5rb6tktcf1t&#xa;• Job Name: SparkJob1-Aggregation&#xa;• EntryPoint: s3://.../spark-scripts/spark-agg1.py&#xa;• Role: dcn-dataengg-emr-serverless-role" vertex="1">
+          <mxGeometry height="110" width="380" x="1005" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-step2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#004D40;align=left;spacingLeft=15;" value="2. &lt;b&gt;RunSparkJob2&lt;/b&gt;&#xa;Resource: emr-serverless:startJobRun.sync&#xa;• App ID: 00g7s5rb6tktcf1t&#xa;• Job Name: SparkJob2-Aggregation&#xa;• EntryPoint: s3://.../spark-scripts/spark-agg2.py&#xa;• Role: dcn-dataengg-emr-serverless-role" vertex="1">
+          <mxGeometry height="110" width="380" x="1005" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#512DA8;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="End Workflow Execution" vertex="1">
+          <mxGeometry height="50" width="220" x="1085" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=1.5;fontSize=12;fontColor=#4A148C;" value="💡 Serverless Advantage: Infrastructure auto-scales &amp;amp; de-allocates automatically. Zero cluster lifecycle overhead." vertex="1">
+          <mxGeometry height="50" width="500" x="945" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-c1" edge="1" parent="1" source="sf-ec2-start" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-ec2-step1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-c2" edge="1" parent="1" source="sf-ec2-step1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-ec2-step2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-c3" edge="1" parent="1" source="sf-ec2-step2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-ec2-step3" value="Success">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-c4" edge="1" parent="1" source="sf-ec2-step3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-ec2-step4" value="Success">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-c5" edge="1" parent="1" source="sf-ec2-step4" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-ec2-end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-c6" edge="1" parent="1" source="sf-ec2-step2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E53935;strokeWidth=1.5;dashed=1;" target="sf-ec2-catch-box" value="Failure">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-ec2-c7" edge="1" parent="1" source="sf-ec2-catch-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E53935;strokeWidth=1.5;dashed=1;" target="sf-ec2-step4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sf-sl-c1" edge="1" parent="1" source="sf-sl-start" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-sl-step1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-c2" edge="1" parent="1" source="sf-sl-step1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-sl-step2" value="Success">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sl-c3" edge="1" parent="1" source="sf-sl-step2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="sf-sl-end" value="Success">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-techstack" name="AWS Tech Stack &amp; Services">
+    <mxGraphModel dx="1989" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ts-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#232F3E;" value="AWS Services &amp;amp; Tech Stack Specifications Overview" vertex="1">
+          <mxGeometry height="40" width="800" x="400" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="Use case: Big Data ETL Pipeline for Rental Vehicle Analytics using EMR, S3, Glue, Athena &amp;amp; Step Functions" vertex="1">
+          <mxGeometry height="25" width="900" x="350" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-group" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="AWS Services Breakdown &amp;amp; Infrastructure Configurations" vertex="1">
+          <mxGeometry height="750" width="1120" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-1-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#E65100;" value="1: Amazon EMR (PySpark)" vertex="1">
+          <mxGeometry height="46.875" width="340" x="40" y="110.79545454545455" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-1-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Distributed PySpark Compute Engine&lt;/b&gt;&#xa;• EMR on EC2: Release emr-spark-8.0.0 (1 Master + 1 Core m5.xlarge)&#xa;• EMR Serverless: Application ID 00g7s5rb6tktcf1t" vertex="1">
+          <mxGeometry height="46.875" width="670" x="410" y="110.79545454545455" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#B71C1C;" value="2: Amazon S3 Data Lake" vertex="1">
+          <mxGeometry height="46.875" width="340" x="40" y="170.45454545454544" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Cloud Object Storage &amp;amp; Parquet Data Lake&lt;/b&gt;&lt;br&gt;• Bucket: s3://dcn-dataengg/&lt;br&gt;• Raw Data: rental_vehicles/ | Scripts: spark-scripts/ | Output: output/" vertex="1">
+          <mxGeometry height="46.875" width="670" x="410" y="170.45454545454544" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#311B92;" value="3: AWS Step Functions" vertex="1">
+          <mxGeometry height="46.875" width="340" x="40" y="230.11363636363637" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Pipeline Orchestration &amp;amp; Fault Tolerance&lt;/b&gt;&#xa;• EMR EC2 State Machine: workflow-rental-vehicles-emr (with catch handler)&#xa;• EMR Serverless State Machine: workflow-rental-vehicles-emrserverless" vertex="1">
+          <mxGeometry height="46.875" width="670" x="410" y="230.11363636363637" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#4A148C;" value="4: AWS Glue Catalog &amp;amp; Crawlers" vertex="1">
+          <mxGeometry height="46.875" width="340" x="40" y="289.7727272727273" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Serverless Metadata &amp;amp; Schema Registry&lt;/b&gt;&#xa;• Glue Database: rental-vehicles-db&#xa;• 4 Crawlers: transaction_metrics, user_metrics, location, vehicle_performance" vertex="1">
+          <mxGeometry height="46.875" width="670" x="410" y="289.7727272727273" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-5-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#01579B;" value="5: Amazon Athena" vertex="1">
+          <mxGeometry height="46.875" width="340" x="40" y="349.4318181818182" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-5-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Interactive Serverless SQL Analytics&lt;/b&gt;&#xa;• Queries Parquet datasets directly in S3 using Glue Data Catalog schemas&#xa;• Zero infrastructure setup, pay-per-query SQL execution" vertex="1">
+          <mxGeometry height="46.875" width="670" x="410" y="349.4318181818182" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-6-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#37474F;" value="6: IAM Security &amp;amp; Role Policies" vertex="1">
+          <mxGeometry height="63.92045454545455" width="340" x="40" y="409.0909090909091" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-6-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Least Privilege Security Governance&lt;/b&gt;&#xa;• Step Functions: dcn-dataengg-stepfunctions (EMR, S3, EC2, CloudWatch permissions)&#xa;• EMR EC2: dcn-dataengg-emr-ec2role &amp;amp; dcn-dataengg-emr-servicerole&#xa;• EMR Serverless: dcn-dataengg-emr-serverless-role" vertex="1">
+          <mxGeometry height="63.92045454545455" width="670" x="410" y="409.0909090909091" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-7-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1A237E;" value="7: PySpark Transformation Scripts" vertex="1">
+          <mxGeometry height="68.18181818181819" width="340" x="40" y="485.7954545454546" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-7-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;PySpark Data Processing Logic&lt;/b&gt;&#xa;• spark-agg1.py: Reads transactions &amp;amp; users → Outputs daily transaction KPIs &amp;amp; user metrics&#xa;• spark-agg2.py: Reads transactions, locations, vehicles → Outputs location &amp;amp; vehicle metrics" vertex="1">
+          <mxGeometry height="68.18181818181819" width="670" x="410" y="485.7954545454546" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-8-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1B5E20;" value="8: Output Data Lake Assets" vertex="1">
+          <mxGeometry height="80.9659090909091" width="340" x="40" y="566.7613636363637" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-8-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Optimized Columnar Parquet Tables&lt;/b&gt;&#xa;• output/transaction_metrics/ (Daily revenue, transaction count, duration metrics)&#xa;• output/user_metrics/ (User total transactions, revenue, spending metrics)&#xa;• output/location_performance_metrics/ (Location revenue, unique vehicles count)&#xa;• output/vehicle_performance_metrics/ (Vehicle type revenue, average duration)" vertex="1">
+          <mxGeometry height="80.9659090909091" width="670" x="410" y="566.7613636363637" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

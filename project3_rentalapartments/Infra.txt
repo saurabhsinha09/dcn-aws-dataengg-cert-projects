@@ -1,0 +1,21 @@
+Infra created for this project
+
+1. MySQL DB - rental-apartments-db
+    a. Database creation - rental_apartments
+    b. Tables - apartments, apartment_attributes, apartment_viewings
+2. Dynamodb table - incremental_load_configurations with Hash key table_name.
+3. IAM rols for glue job. Dynamodb full access, S3 full access, secret manager read access and Cloudwatch even full access.
+4. Redshift Serverless cluster
+    a. Database - db_rental_apartments
+    a. Schema - raw_zone, processed_zone
+    b. Tables - apartments, apartment_attributes, apartment_viewings, fact_apartment_viewings, dim_apartments, dim_users
+5. Three glue jobs.
+    a. Python Job - mysql-extraction-job
+    b. Python Job - redshift-raw-ingestion
+    c. Python Job - redshift-processed-layer-ingestion
+6. S3 bucket
+    a. Project Data bucket
+7. Step Functions
+    a. State Machine - workflow-rental-apartments
+    b. IAM Role - dcn-dataengg-stepfunctions (GlueConsoleFullAccess and CloudWatchLogsFullAccess)
+    c. Code - step-functions.json

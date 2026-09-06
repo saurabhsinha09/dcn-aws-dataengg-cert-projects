@@ -1,0 +1,480 @@
+<mxfile host="app.diagrams.net" agent="Antigravity AI Agent" pages="5">
+  <diagram id="_G9mYAvgLopveQq7epv0" name="Overview">
+    <mxGraphModel dx="1989" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="680" width="1320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Use case: ETL / Data Processing of Rental Apartments using &lt;b&gt;Glue&lt;/b&gt;, &lt;b&gt;Redshift&lt;/b&gt; &amp;amp; &lt;b&gt;Step functions&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="Rental Apartments Dataset" vertex="1">
+          <mxGeometry height="40" width="240" x="70" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-6" parent="1" style="text;html=1;fontSize=13;fontColor=#333333;fontFace=Arial;align=left;" value="–  Apartments (apartments)&#xa;–  Attributes (apartment_attributes)&#xa;–  Viewings telemetry (apartment_viewings)" vertex="1">
+          <mxGeometry height="65" width="230" x="80" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="180" width="220" x="70" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-8" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="MySQL DB&#xa;(rental_apartments)&#xa;[OLTP Source]" vertex="1">
+          <mxGeometry height="70" width="200" x="80" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-9" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="170" width="220" x="70" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-10" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="146" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-11" parent="1" style="text;html=1;fontSize=14;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="DynamoDB&#xa;incremental_load_configs" vertex="1">
+          <mxGeometry height="50" width="210" x="75" y="576" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="160" width="230" x="360" y="271" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-13" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="70" x="380" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-14" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#333333;fontFace=Arial;align=left;" value="amazon&#xa;S3&#xa;(Landing Zone)" vertex="1">
+          <mxGeometry height="50" width="100" x="471" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="220" width="260" x="680" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-16" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="780" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-17" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="AWS Glue Python Shell&#xa;ETL Jobs" vertex="1">
+          <mxGeometry height="40" width="240" x="690" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-18" parent="1" style="text;html=1;fontSize=12;fontColor=#555555;fontFace=Arial;align=left;" value="1. mysql-extraction-job&#xa;2. redshift-raw-ingestion&#xa;3. redshift-processed-layer-ingestion" vertex="1">
+          <mxGeometry height="70" width="230" x="700" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-19" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="240" width="260" x="1034" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-20" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.redshift;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="70" x="1132" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-21" parent="1" style="text;html=1;fontSize=18;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="Amazon Redshift&#xa;Serverless DWH" vertex="1">
+          <mxGeometry height="40" width="240" x="1047" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-22" parent="1" style="text;html=1;fontSize=13;fontStyle=1;fontColor=#333333;fontFace=Arial;align=center;" value="• raw_zone (Staging)&#xa;• processed_zone (Star Schema)" vertex="1">
+          <mxGeometry height="50" width="240" x="1047" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="130" width="850" x="456" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-24" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.step_functions;labelBackgroundColor=none;sketch=0;fillColor=#C71325;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="70" x="486" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-25" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#C71325;fontFace=Arial;align=left;" value="AWS Step Functions (workflow-rental-apartments)" vertex="1">
+          <mxGeometry height="30" width="500" x="576" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-26" parent="1" style="text;html=1;fontSize=13;fontColor=#555555;fontFace=Arial;align=left;" value="Synchronous orchestration of 7 sequential Glue extraction, ingestion, and dimensional modeling tasks" vertex="1">
+          <mxGeometry height="40" width="700" x="576" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-27" edge="1" parent="1" source="t6nhXRtm6AkrTKVQ4iRl-7" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="t6nhXRtm6AkrTKVQ4iRl-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-28" edge="1" parent="1" source="t6nhXRtm6AkrTKVQ4iRl-9" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#888888;strokeWidth=1.5;dashed=1;endArrow=block;endFill=1;entryX=0.141;entryY=1.007;entryDx=0;entryDy=0;entryPerimeter=0;" target="t6nhXRtm6AkrTKVQ4iRl-15" value="Watermarks">
+          <mxGeometry relative="1" x="0.1736" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="465" y="530" />
+              <mxPoint x="465" y="510" />
+              <mxPoint x="716.62" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-29" edge="1" parent="1" source="t6nhXRtm6AkrTKVQ4iRl-12" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="t6nhXRtm6AkrTKVQ4iRl-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-30" edge="1" parent="1" source="t6nhXRtm6AkrTKVQ4iRl-15" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="t6nhXRtm6AkrTKVQ4iRl-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t6nhXRtm6AkrTKVQ4iRl-31" edge="1" parent="1" source="t6nhXRtm6AkrTKVQ4iRl-23" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#888888;strokeWidth=1.5;dashed=1;endArrow=block;endFill=1;" target="t6nhXRtm6AkrTKVQ4iRl-15" value="Orchestrates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-master" name="Master System Architecture">
+    <mxGraphModel dx="2131" dy="854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="101" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="AWS Cloud Serverless Pipeline: MySQL RDS → S3 → AWS Glue → Redshift Serverless (Orchestrated by AWS Step Functions)" vertex="1">
+          <mxGeometry height="25" width="900" x="340" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="110" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="1. Source &amp; State Layer" vertex="1">
+          <mxGeometry height="520" width="280" x="40" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="111" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1B5E20;" value="MySQL Database&#xa;(rental_apartments)&#xa;[OLTP Source]" vertex="1">
+          <mxGeometry height="90" width="220" x="70" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="112" parent="1" style="shape=table;html=1;whiteSpace=wrap;rounded=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#E65100;startSize=90;" value="DynamoDB State Table&#xa;incremental_load_&#xa;configurations" vertex="1">
+          <mxGeometry height="90" width="220" x="70" y="444" as="geometry" />
+        </mxCell>
+        <mxCell id="113" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="Secrets Manager&#xa;rental_db&#xa;(MySQL Creds)" vertex="1">
+          <mxGeometry height="80" width="220" x="70" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="120" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="2. Extraction Layer" vertex="1">
+          <mxGeometry height="520" width="260" x="360" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="121" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#4A148C;" value="AWS Glue Python Shell Job 1&#xa;mysql-extraction-job" vertex="1">
+          <mxGeometry height="90" width="220" x="380" y="447" as="geometry" />
+        </mxCell>
+        <mxCell id="130" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="3. Landing Zone" vertex="1">
+          <mxGeometry height="520" width="260" x="660" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="131" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=13;fontColor=#E65100;" value="Amazon S3 Bucket&#xa;s3://dcn-dataengg/&#xa;raw_landing_zone/" vertex="1">
+          <mxGeometry height="100" width="220" x="680" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="140" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="4. Ingestion &amp; Transformation Layer" vertex="1">
+          <mxGeometry height="520" width="280" x="960" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="141" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#4A148C;" value="AWS Glue Python Shell Job 2&#xa;redshift-raw-ingestion" vertex="1">
+          <mxGeometry height="80" width="220" x="990" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="142" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#4A148C;" value="AWS Glue Python Shell Job 3&#xa;redshift-processed-layer-ingestion" vertex="1">
+          <mxGeometry height="80" width="220" x="990" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="143" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="Secrets Manager&#xa;dwh-credentials&#xa;(Redshift Creds)" vertex="1">
+          <mxGeometry height="70" width="220" x="990" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="150" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="5. Redshift Serverless Data Warehouse" vertex="1">
+          <mxGeometry height="520" width="260" x="1280" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="151" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#0D47A1;" value="Raw Zone Schema&#xa;(raw_zone.*)&#xa;• apartments&#xa;• apartment_attributes&#xa;• apartment_viewings" vertex="1">
+          <mxGeometry height="180" width="220" x="1300" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="152" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#0D47A1;" value="Processed Zone Schema&#xa;(processed_zone.*)&#xa;• dim_apartments&#xa;• dim_users&#xa;• fact_apartment_viewings" vertex="1">
+          <mxGeometry height="190" width="220" x="1300" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="160" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="6. Orchestration Layer (AWS Step Functions)" vertex="1">
+          <mxGeometry height="130" width="1500" x="40" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="161" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#311B92;" value="AWS Step Functions State Machine: workflow-rental-apartments&#xa;(Synchronous Execution via arn:aws:states:::glue:startJobRun.sync)" vertex="1">
+          <mxGeometry height="60" width="1440" x="70" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="171" edge="1" parent="1" source="113" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#78909C;strokeWidth=1.5;fontSize=11;fontColor=#546E7A;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="121" value="Reads Credentials">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="172" edge="1" parent="1" source="112" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=2;fontSize=11;fontColor=#37474F;" target="121" value="High-Watermark Read/Write">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="173" edge="1" parent="1" source="111" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=2;fontSize=11;fontColor=#37474F;" target="121" value="Extract Data (Incremental/Full)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="174" edge="1" parent="1" source="121" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=2;fontSize=11;fontColor=#37474F;" target="131" value="Write CSV Files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="175" edge="1" parent="1" source="143" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#78909C;strokeWidth=1.5;fontSize=11;fontColor=#546E7A;exitX=0.672;exitY=-0.043;exitDx=0;exitDy=0;exitPerimeter=0;" target="141" value="Reads Credentials">
+          <mxGeometry relative="1" x="-0.8235" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="176" edge="1" parent="1" source="143" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#78909C;strokeWidth=1.5;fontSize=11;fontColor=#546E7A;exitX=0.303;exitY=-0.027;exitDx=0;exitDy=0;exitPerimeter=0;" target="142" value="Reads Credentials">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1056.71" y="550" />
+              <mxPoint x="1056.71" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="177" edge="1" parent="1" source="131" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=2;fontSize=11;fontColor=#37474F;" target="141" value="COPY Command (CSV)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="495" />
+              <mxPoint x="940" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="178" edge="1" parent="1" source="141" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=2;fontSize=11;fontColor=#37474F;" target="151" value="MERGE / Staging Upsert">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="179" edge="1" parent="1" source="151" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=2;fontSize=11;fontColor=#37474F;" target="142" value="Transformation / Dimensional Modeling">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="180" edge="1" parent="1" source="142" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=2;fontSize=11;fontColor=#37474F;" target="152" value="Load Processed Star Schema">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="181" edge="1" parent="1" source="160" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#78909C;strokeWidth=1.5;fontSize=11;fontColor=#546E7A;exitX=0.36;exitY=0.308;exitDx=0;exitDy=0;exitPerimeter=0;" target="121" value="Triggers Job 1 &amp; 2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="182" edge="1" parent="1" source="161" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#78909C;strokeWidth=1.5;fontSize=11;fontColor=#546E7A;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="142" value="Triggers Job 3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="675" />
+              <mxPoint x="940" y="675" />
+              <mxPoint x="940" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VEQEMycgaD_rtlyGEGno-182" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1510" x="40" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="VEQEMycgaD_rtlyGEGno-183" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="99" as="geometry" />
+        </mxCell>
+        <mxCell id="RU17CMUqK2_0WjBdGq-1-182" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="&amp;nbsp; &lt;span style=&quot;color: rgb(35, 47, 62); font-size: 20px; font-weight: 700; text-align: center; white-space: normal;&quot;&gt;🏢&amp;nbsp;&lt;/span&gt;Rental Apartments Data Engineering" vertex="1">
+          <mxGeometry height="36" width="1100" x="160" y="104" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="jqSrHxZxvMDB9PpNQOoD" name="Glue Jobs">
+    <mxGraphModel dx="1363" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="640" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="AWS Glue Three-Stage Processing Pipeline" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="170" width="220" x="70" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-6" parent="1" style="text;html=1;fontSize=15;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="MySQL DB&#xa;(rental_apartments)" vertex="1">
+          <mxGeometry height="40" width="200" x="80" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-7" parent="1" style="text;html=1;fontSize=12;fontColor=#555555;fontFace=Arial;align=center;" value="📄 apartments&#xa;📄 apartment_attributes&#xa;📄 apartment_viewings" vertex="1">
+          <mxGeometry height="80" width="200" x="80" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-8" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="450" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-9" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#333333;fontFace=Arial;align=left;" value="Amazon Glue" vertex="1">
+          <mxGeometry height="25" width="120" x="520" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-10" parent="1" style="text;html=1;fontSize=12;fontColor=#666666;fontFace=Arial;align=left;" value="mysql-extraction-job&#xa;(Python Shell + Boto3 + DynamoDB)" vertex="1">
+          <mxGeometry height="35" width="220" x="520" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="170" width="240" x="360" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-12" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="380" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-13" parent="1" style="text;html=1;fontSize=14;fontStyle=1;fontColor=#333333;fontFace=Arial;align=left;" value="amazon S3&#xa;(Landing Zone)" vertex="1">
+          <mxGeometry height="40" width="140" x="440" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-14" parent="1" style="text;html=1;fontSize=12;fontColor=#555555;fontFace=Arial;align=center;" value="📄 apartments.csv&#xa;📄 apartment_attributes.csv&#xa;📄 apartment_viewings.csv" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-15" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="740" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-16" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#333333;fontFace=Arial;align=left;" value="Amazon Glue" vertex="1">
+          <mxGeometry height="25" width="120" x="710" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-17" parent="1" style="text;html=1;fontSize=12;fontColor=#666666;fontFace=Arial;align=left;" value="redshift-raw-ingestion&#xa;(COPY to tmp_* &amp; MERGE to raw_zone)" vertex="1">
+          <mxGeometry height="35" width="230" x="685" y="433" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="150" width="260" x="1000" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-19" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.redshift;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1020" y="199" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-20" parent="1" style="text;html=1;fontSize=15;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=left;" value="Redshift raw_zone" vertex="1">
+          <mxGeometry height="30" width="170" x="1080" y="209" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-21" parent="1" style="text;html=1;fontSize=12;fontColor=#555555;fontFace=Arial;align=left;" value="• raw_zone.apartments&#xa;• raw_zone.apartment_attributes&#xa;• raw_zone.apartment_viewings" vertex="1">
+          <mxGeometry height="60" width="230" x="1020" y="259" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-22" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="1130" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="150" width="260" x="1000" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-24" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.redshift;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1020" y="503" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-25" parent="1" style="text;html=1;fontSize=15;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=left;" value="processed_zone" vertex="1">
+          <mxGeometry height="30" width="170" x="1080" y="513" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-26" parent="1" style="text;html=1;fontSize=12;fontColor=#555555;fontFace=Arial;align=left;" value="• dim_apartments&#xa;• dim_users&#xa;• fact_apartment_viewings" vertex="1">
+          <mxGeometry height="60" width="230" x="1020" y="563" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-27" edge="1" parent="1" source="O7Qx1kBYSAmqNMS7hUUU-5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="O7Qx1kBYSAmqNMS7hUUU-8" value="Extract Query">
+          <mxGeometry relative="1" x="-0.5774" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="220.05999999999995" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-28" edge="1" parent="1" source="O7Qx1kBYSAmqNMS7hUUU-8" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="O7Qx1kBYSAmqNMS7hUUU-11" value="Write CSVs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-29" edge="1" parent="1" source="O7Qx1kBYSAmqNMS7hUUU-11" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="O7Qx1kBYSAmqNMS7hUUU-15" value="Read CSVs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-30" edge="1" parent="1" source="O7Qx1kBYSAmqNMS7hUUU-15" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="O7Qx1kBYSAmqNMS7hUUU-18" value="COPY &amp; MERGE">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910.06" y="395.05999999999995" />
+              <mxPoint x="910.06" y="254" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O7Qx1kBYSAmqNMS7hUUU-31" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" value="redshift-processed-layer-ingestion">
+          <mxGeometry relative="1" x="-0.5205" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1120" y="330" as="sourcePoint" />
+            <mxPoint x="1120" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-stepfunctions" name="Step Functions Orchestration">
+    <mxGraphModel dx="3589" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="510" width="1380" x="-1560" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1380" x="-1560" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="-1530" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="AWS Step Functions DAG Workflow &amp;amp; State Diagram (&lt;b&gt;workflow-rental-apartments&lt;/b&gt;)" vertex="1">
+          <mxGeometry height="36" width="1100" x="-1450" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=50;" value="Start Workflow Execution&#xa;(workflow-rental-apartments)" vertex="1">
+          <mxGeometry height="70" width="220" x="-1530" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Task 1: MysqlExtractionJobApartments&#xa;(GlueJob: mysql-extraction-job (apartments))" vertex="1">
+          <mxGeometry height="75" width="250" x="-1230" y="137.5" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Task 2: RedshiftRawIngestionApartments&#xa;(GlueJob: redshift-raw-ingestion (apartments))" vertex="1">
+          <mxGeometry height="75" width="250" x="-830" y="137.5" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Task 3: MysqlExtractionJobApartmentViewings&#xa;(GlueJob: mysql-extraction-job (apartment_viewings))" vertex="1">
+          <mxGeometry height="75" width="250" x="-450" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Task 4: RedshiftRawIngestionApartmentViewings&#xa;(GlueJob: redshift-raw-ingestion (apartment_viewings))" vertex="1">
+          <mxGeometry height="75" width="250" x="-800" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Task 5: MysqlExtractionJobApartmentAttributes&#xa;(GlueJob: mysql-extraction-job (apartment_attributes))" vertex="1">
+          <mxGeometry height="75" width="250" x="-1220" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Task 6: RedshiftRawIngestionApartmentAttributes&#xa;(GlueJob: redshift-raw-ingestion (apartment_attributes))" vertex="1">
+          <mxGeometry height="75" width="250" x="-1220" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Task 7: RedshiftProcessedLayerIngestion&#xa;(GlueJob: redshift-processed-layer-ingestion)" vertex="1">
+          <mxGeometry height="75" width="250" x="-800" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#512DA8;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;" value="Workflow Execution Complete&#xa;(Success)" vertex="1">
+          <mxGeometry height="75" width="210" x="-410" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-14" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-15" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-16" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-7" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-17" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-8" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-18" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-9" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-19" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-10" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-20" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-11" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R6rjDCoFrI8KDeCD3gu9-21" edge="1" parent="1" source="R6rjDCoFrI8KDeCD3gu9-12" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="R6rjDCoFrI8KDeCD3gu9-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-techstack" name="AWS Tech Stack &amp; Services">
+    <mxGraphModel dx="1865" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="200" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#232F3E;" value="AWS Infrastructure &amp; Tech Stack Overview" vertex="1">
+          <mxGeometry height="40" width="800" x="400" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="201" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="Use case: ETL / Data Processing of Rental Apartments using Glue, Redshift &amp; Step functions" vertex="1">
+          <mxGeometry height="25" width="900" x="350" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="210" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="Tech Stack" vertex="1">
+          <mxGeometry height="520" width="1020" x="270" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="220" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#311B92;" value="1: AWS Step Functions" vertex="1">
+          <mxGeometry height="50" width="306" x="40.8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="221" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;" value="Data Orchestration State Machine (workflow-rental-apartments)" vertex="1">
+          <mxGeometry height="50" width="612" x="367.2" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="222" parent="210" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#0D47A1;" value="2: AWS Redshift Serverless" vertex="1">
+          <mxGeometry height="50" width="306" x="40.8" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="223" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;" value="Cloud Data Warehouse (db_rental_apartments: raw_zone &amp; processed_zone)" vertex="1">
+          <mxGeometry height="50" width="612" x="367.2" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="224" parent="210" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=13;fontColor=#E65100;" value="3: Amazon S3" vertex="1">
+          <mxGeometry height="50" width="306" x="40.8" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="225" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;" value="Storage Layer / Data Lake Landing Zone (s3://dcn-dataengg/raw_landing_zone/)" vertex="1">
+          <mxGeometry height="50" width="612" x="367.2" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="226" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#4A148C;" value="4: AWS Glue | Python Shell" vertex="1">
+          <mxGeometry height="50" width="306" x="40.8" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="227" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;" value="Data Extraction, Ingestion &amp; Dimensional Transformation (3 Python Shell Jobs)" vertex="1">
+          <mxGeometry height="50" width="612" x="367.2" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="228" parent="210" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1B5E20;" value="5: AWS RDS / Aurora MySQL" vertex="1">
+          <mxGeometry height="50" width="306" x="40.8" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="229" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;" value="OLTP Source Database (rental-apartments-db: apartments, attributes, viewings)" vertex="1">
+          <mxGeometry height="50" width="612" x="367.2" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="230" parent="210" style="shape=table;html=1;whiteSpace=wrap;rounded=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#E65100;" value="6: AWS DynamoDB" vertex="1">
+          <mxGeometry height="50" width="306" x="40.8" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="231" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;" value="State Tracking Table (incremental_load_configurations)" vertex="1">
+          <mxGeometry height="50" width="612" x="367.2" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="232" parent="210" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="7: AWS Secrets Manager" vertex="1">
+          <mxGeometry height="50" width="306" x="40.8" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="233" parent="210" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;" value="Credential Vault (rental_db &amp; dwh-credentials)" vertex="1">
+          <mxGeometry height="50" width="612" x="367.2" y="430" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

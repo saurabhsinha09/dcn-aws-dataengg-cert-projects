@@ -1,0 +1,7 @@
+Infra created for this project
+
+1. Redshift Serverless with public endpoint and base capacity 4 RPU's.
+2. Two S3 buckets
+    a. Airflow bucket for DAGS and Requirement.
+    b. Project Data bucket
+3. AWS managed Airflow with public endpoint of mw1.small.

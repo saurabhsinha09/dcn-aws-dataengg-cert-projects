@@ -1,0 +1,457 @@
+<mxfile host="app.diagrams.net" agent="Antigravity AI Agent" pages="5">
+  <diagram id="page-overview" name="Overview">
+    <mxGraphModel dx="2131" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ov-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="760" width="1320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Use case: Real-Time Taxi Trips Streaming Pipeline using &lt;b&gt;Amazon Kinesis&lt;/b&gt;, &lt;b&gt;AWS Lambda&lt;/b&gt;, &lt;b&gt;DynamoDB&lt;/b&gt;, &lt;b&gt;AWS Glue&lt;/b&gt; &amp;amp; &lt;b&gt;Amazon S3&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8D6E63;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="190" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;labelBackgroundColor=none;sketch=0;fillColor=#8D6E63;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="155" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#8D6E63;fontFace=Arial;align=center;" value="Event Producer&#xa;Kinesis Script" vertex="1">
+          <mxGeometry height="40" width="200" x="80" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;kinesis-trips-producer.py&lt;/b&gt;&#xa;• Reads sample CSVs&#xa;  (trip_start.csv, trip_end.csv)&#xa;• Emits JSON event streams&#xa;• Region: ap-south-1" vertex="1">
+          <mxGeometry height="90" width="200" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.kinesis;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="405" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="Amazon Kinesis&#xa;Data Streams" vertex="1">
+          <mxGeometry height="40" width="200" x="330" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Real-Time Ingestion Streams:&lt;/b&gt;&#xa;1. &lt;b&gt;trip_start_stream&lt;/b&gt;&#xa;   (trip start event records)&#xa;2. &lt;b&gt;trip_end_stream&lt;/b&gt;&#xa;   (trip end event records)" vertex="1">
+          <mxGeometry height="110" width="200" x="330" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="210" x="570" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="665" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="AWS Lambda&#xa;Event Handlers" vertex="1">
+          <mxGeometry height="40" width="220" x="580" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Serverless Functions:&lt;/b&gt;&#xa;• &lt;b&gt;trip-start-processing:&lt;/b&gt;&#xa;  Inserts initial state into DynamoDB&#xa;• &lt;b&gt;trip-end-processing:&lt;/b&gt;&#xa;  Updates state &amp;amp; triggers Glue job" vertex="1">
+          <mxGeometry height="140" width="220" x="580" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E73B8;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="230" x="840" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="930" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="Amazon DynamoDB&#xa;Trip State Table" vertex="1">
+          <mxGeometry height="40" width="210" x="850" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ddb-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Table:&lt;/b&gt; trip_details&#xa;&lt;b&gt;Primary Key:&lt;/b&gt; trip_id&#xa;&#xa;&lt;b&gt;Attributes:&lt;/b&gt; pickup/dropoff times,&#xa;vendor_id, fare_amount, tip_amount,&#xa;trip_distance, passenger_count, status" vertex="1">
+          <mxGeometry height="140" width="210" x="850" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E05243;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="220" x="1122" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1207" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="AWS Glue &amp;amp; S3&#xa;ETL &amp;amp; Analytics Output" vertex="1">
+          <mxGeometry height="40" width="200" x="1132" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Glue Job:&lt;/b&gt; process_completed_trips&lt;br&gt;Scans DynamoDB completed trips&lt;br&gt;&lt;br&gt;&lt;b&gt;S3 Output Lake:&lt;/b&gt;&lt;br&gt;s3://dcn-dataengg/&lt;br&gt;taxi_trips/completed_trips/" vertex="1">
+          <mxGeometry height="140" width="200" x="1132" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-btm-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="290" width="1000" x="250" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-iam-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;labelBackgroundColor=none;sketch=0;fillColor=#C71325;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="280" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-iam-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#C71325;fontFace=Arial;align=left;" value="IAM Role: dcn-dataengg-streaming-lambda" vertex="1">
+          <mxGeometry height="30" width="420" x="355" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-iam-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Execution Permissions:&lt;/b&gt;&#xa;• AmazonKinesisFullAccess&#xa;• AmazonDynamoDBFullAccess&#xa;• AWSGlueConsoleFullAccess&#xa;• CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="80" width="420" x="355" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-fmt-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="790" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-fmt-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#E05243;fontFace=Arial;align=left;" value="S3 Completed Trip Aggregates" vertex="1">
+          <mxGeometry height="30" width="400" x="865" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-fmt-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Output Format:&lt;/b&gt; JSON&lt;br&gt;&lt;b&gt;Filename Pattern:&lt;/b&gt;&lt;br&gt;aggregated_results_&amp;lt;timestamp&amp;gt;.json&lt;br&gt;&lt;br&gt;&lt;b&gt;Aggregated Metrics:&lt;/b&gt; Daily completed trip counts,&amp;nbsp;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; revenue, average fare &amp;amp; distance.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="370" x="865" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-footer-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=1;fontSize=12;fontStyle=1;fontColor=#311B92;fontFace=Arial;" value="Real-Time &amp;amp; Serverless: Ingests Kinesis streams instantly, maintains DynamoDB trip state, and triggers Glue for analytics." vertex="1">
+          <mxGeometry height="40" width="940" x="280" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-conn1" edge="1" parent="1" source="ov-prod-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-kin-box" value="Publishes Events">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-conn2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" value="Triggers Lambda">
+          <mxGeometry relative="1" x="-0.2" y="31" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="520" y="281" as="sourcePoint" />
+            <mxPoint x="570" y="281" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-conn3" edge="1" parent="1" source="ov-lmb-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-ddb-box" value="Updates State">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-conn4" edge="1" parent="1" source="ov-ddb-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=3;endArrow=block;endFill=1;" target="ov-glue-box" value="Glue Scans State">
+          <mxGeometry relative="1" x="0.1538" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-master" name="Master System Architecture">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1620" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🚖 Streaming Taxi Trips Pipeline Architecture: Kinesis Streams → Lambda Event Handlers → DynamoDB State → Glue Serverless ETL → S3 Data Lake" vertex="1">
+          <mxGeometry height="36" width="1350" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="End-to-End Real-Time Ingestion, State Management, and Batch Aggregation for Taxi Trip Telemetry" vertex="1">
+          <mxGeometry height="25" width="1000" x="350" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp1" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="1. Streaming Ingestion (Kinesis)" vertex="1">
+          <mxGeometry height="740" width="250" x="30" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-prod" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFEBE9;strokeColor=#8D6E63;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4E342E;" value="⚙️ Kinesis Producer Script&#xa;&lt;b&gt;kinesis-trips-producer.py&lt;/b&gt;&#xa;• Reads trip_start.csv &amp;amp; trip_end.csv&#xa;• Sends JSON events to Kinesis" vertex="1">
+          <mxGeometry height="90" width="200" x="60" y="283" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📡 Kinesis Stream 1&#xa;&lt;b&gt;trip_start_stream&lt;/b&gt;&#xa;• Ingests trip start telemetry&#xa;• (trip_id, vendor_id, pickup_datetime, estimated_fare_amount)" vertex="1">
+          <mxGeometry height="110" width="200" x="60" y="434" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📡 Kinesis Stream 2&#xa;&lt;b&gt;trip_end_stream&lt;/b&gt;&#xa;• Ingests trip end telemetry&#xa;• (trip_id, dropoff_datetime, fare_amount, tip_amount, distance)" vertex="1">
+          <mxGeometry height="110" width="200" x="60" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp2" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="2. Event Processing (AWS Lambda)" vertex="1">
+          <mxGeometry height="740" width="260" x="310" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-l1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="⚡ Lambda Function 1&#xa;&lt;b&gt;trip-start-processing&lt;/b&gt;&#xa;(&lt;i&gt;lambda-trip-start.py&lt;/i&gt;)&#xa;• Triggered by trip_start_stream&#xa;• Decodes base64 payload&#xa;• Inserts new trip record into DynamoDB" vertex="1">
+          <mxGeometry height="130" width="220" x="330" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-l2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="⚡ Lambda Function 2&#xa;&lt;b&gt;trip-end-processing&lt;/b&gt;&#xa;(&lt;i&gt;lambda-trip-end-with-glue.py&lt;/i&gt;)&#xa;• Triggered by trip_end_stream&#xa;• Updates DynamoDB trip state&#xa;• Triggers Glue Job process_completed_trips" vertex="1">
+          <mxGeometry height="140" width="220" x="330" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#37474F;" value="IAM Role: dcn-dataengg-streaming-lambda&#xa;• AmazonKinesisFullAccess&#xa;• AmazonDynamoDBFullAccess&#xa;• AWSGlueConsoleFullAccess&#xa;• CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="110" width="220" x="330" y="639" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp3" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="3. Real-Time State (DynamoDB)" vertex="1">
+          <mxGeometry height="740" width="250" x="600" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-ddb" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;" value="🗄️ DynamoDB Table&#xa;&lt;b&gt;trip_details&lt;/b&gt;&#xa;---------------------------------&#xa;• Partition Key: &lt;b&gt;trip_id&lt;/b&gt; (String)&#xa;&#xa;&lt;b&gt;Attributes:&lt;/b&gt;&#xa;• pickup_location_id, dropoff_location_id&#xa;• vendor_id, pickup_datetime&#xa;• dropoff_datetime (updated on end)&#xa;• estimated_fare_amount, fare_amount&#xa;• tip_amount, trip_distance&#xa;• passenger_count, status" vertex="1">
+          <mxGeometry height="440" width="210" x="620" y="283" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp4" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="4. Serverless ETL (AWS Glue)" vertex="1">
+          <mxGeometry height="740" width="250" x="880" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-glue" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="⚙️ AWS Glue ETL Job&#xa;&lt;b&gt;process_completed_trips&lt;/b&gt;&#xa;(&lt;i&gt;glue-process-data.py&lt;/i&gt;)&#xa;---------------------------------&#xa;• Scans DynamoDB trip_details table&#xa;• Filters completed trip records&#xa;• Computes daily aggregated stats:&#xa;  - total_completed_trips&#xa;  - total_revenue &amp;amp; tips&#xa;  - average_fare &amp;amp; distance&#xa;• Converts metrics to JSON payload" vertex="1">
+          <mxGeometry height="220" width="210" x="900" y="402" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp5" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="5. Data Lake Storage (Amazon S3)" vertex="1">
+          <mxGeometry height="740" width="260" x="1160" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontColor=#E65100;" value="S3 Output Data Lake&lt;br&gt;s3://dcn-dataengg/&lt;br&gt;taxi_trips/completed_trips/" vertex="1">
+          <mxGeometry height="90" width="220" x="1180" y="404" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-file" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📄 &lt;b&gt;aggregated_results_&amp;lt;timestamp&amp;gt;.json&lt;/b&gt;&#xa;Stores aggregated daily metrics for completed taxi trips" vertex="1">
+          <mxGeometry height="75" width="220" x="1180" y="524" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp6" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="6. Analytics &amp;amp; Monitoring" vertex="1">
+          <mxGeometry height="740" width="200" x="1450" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-cw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C71325;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="📊 Amazon CloudWatch&#xa;• Lambda execution logs&#xa;• Kinesis stream metrics&#xa;• Glue job logs" vertex="1">
+          <mxGeometry height="110" width="160" x="1470" y="371" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-dash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;" value="📈 Fleet Analytics&#xa;• Daily Trip Volume&#xa;• Average Trip Fare&#xa;• Peak Hour Insights" vertex="1">
+          <mxGeometry height="120" width="160" x="1470" y="511" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c1" edge="1" parent="1" source="m-g1-prod" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g1-s1" value="Start Events">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c2" edge="1" parent="1" source="m-g1-prod" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="m-g1-s2" value="End Events">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="414" />
+              <mxPoint x="40" y="414" />
+              <mxPoint x="40" y="596.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c3" edge="1" parent="1" source="m-g1-s1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g2-l1" value="Triggers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="489" />
+              <mxPoint x="300" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c4" edge="1" parent="1" source="m-g1-s2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g2-l2" value="Triggers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c5" edge="1" parent="1" source="m-g2-l1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g3-ddb" value="Inserts Start State">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c6" edge="1" parent="1" source="m-g2-l2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g3-ddb" value="Updates End State">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c7" edge="1" parent="1" source="m-g2-l2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;exitX=0.99;exitY=0.704;exitDx=0;exitDy=0;exitPerimeter=0;" target="m-g4-glue" value="Triggers Glue Job">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="567.6" />
+              <mxPoint x="580" y="740" />
+              <mxPoint x="870" y="740" />
+              <mxPoint x="870" y="512" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c8" edge="1" parent="1" source="m-g4-glue" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-s3" value="Writes Aggregates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-dataflow" name="Detailed Event &amp; Data Flow">
+    <mxGraphModel dx="1989" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="df-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="860" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="df-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="df-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="df-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Streaming Taxi Trips Event Processing &amp;amp; State Management Lifecycle" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s1-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3F51B5;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="350" width="1340" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s1-hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3F51B5;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="Stage 1: Trip Start Event Processing (trip_start_stream → lambda-trip-start.py → DynamoDB)" vertex="1">
+          <mxGeometry height="35" width="1340" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s1-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📥 trip_start_stream&#xa;• Payload: trip_id, pickup_location_id,&#xa;  dropoff_location_id, vendor_id,&#xa;  pickup_datetime, estimated_fare" vertex="1">
+          <mxGeometry height="90" width="250" x="102" y="229" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s1-logic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontColor=#1A237E;align=left;spacingLeft=15;" value="&lt;b&gt;Trip Start Lambda Logic:&lt;/b&gt;&lt;br&gt;1. Decodes base64 Kinesis stream records.&lt;br&gt;2. Parses JSON trip start event attributes.&lt;br&gt;3. Converts estimated_fare_amount to Decimal.&lt;br&gt;4. Writes new trip item to DynamoDB &lt;b&gt;trip_details&lt;/b&gt; with status = STARTED." vertex="1">
+          <mxGeometry height="150" width="460" x="410" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="pl-s1-out" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;align=left;spacingLeft=10;" value="🗄️ &lt;b&gt;DynamoDB PutItem:&lt;/b&gt;&#xa;Creates initial trip record in trip_details table (Key: trip_id)" vertex="1">
+          <mxGeometry height="70" width="450" x="955" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s2-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#009688;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="370" width="1340" x="80" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s2-hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#009688;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="Stage 2: Trip End Update &amp;amp; Glue ETL Execution (trip_end_stream → lambda-trip-end → Glue → S3)" vertex="1">
+          <mxGeometry height="35" width="1340" x="80" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s2-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📥 trip_end_stream&#xa;• Payload: trip_id, dropoff_datetime,&#xa;  fare_amount, tip_amount,&#xa;  trip_distance, passenger_count" vertex="1">
+          <mxGeometry height="90" width="250" x="110" y="634" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s2-logic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontColor=#004D40;align=left;spacingLeft=15;" value="&lt;b&gt;Trip End Lambda &amp;amp; Glue Job Logic:&lt;/b&gt;&lt;br&gt;1. Looks up trip_id in DynamoDB trip_details table.&lt;br&gt;2. Updates record with actual dropoff time, distance, fare, tips &amp;amp; status = COMPLETED.&lt;br&gt;3. Calls boto3 glue.start_job_run(JobName=&#39;process_completed_trips&#39;).&lt;br&gt;4. Glue scans DynamoDB, aggregates daily revenue/trip totals, writes JSON output to S3." vertex="1">
+          <mxGeometry height="170" width="460" x="420" y="594" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s2-out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;align=left;spacingLeft=10;" value="🗄️ &lt;b&gt;DynamoDB UpdateItem:&lt;/b&gt;&#xa;Updates completed trip attributes for matching trip_id" vertex="1">
+          <mxGeometry height="65" width="450" x="952" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s2-out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📄 &lt;b&gt;S3 Output Asset:&lt;/b&gt;&#xa;s3://.../taxi_trips/completed_trips/aggregated_results_&amp;lt;timestamp&amp;gt;.json" vertex="1">
+          <mxGeometry height="65" width="450" x="951" y="744" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c1" edge="1" parent="1" source="df-s1-in" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="df-s1-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c2" edge="1" parent="1" source="df-s1-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;" target="pl-s1-out" value="Writes DynamoDB">
+          <mxGeometry relative="1" x="0.0148" y="-34" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="df-c3" edge="1" parent="1" source="df-s2-in" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="df-s2-logic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c4" edge="1" parent="1" source="df-s2-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="df-s2-out1" value="Updates Record">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c5" edge="1" parent="1" source="df-s2-logic" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="df-s2-out2" value="Saves Aggregates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-workflow" name="Lambda &amp;amp; Glue Workflow Orchestration">
+    <mxGraphModel dx="1989" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wf-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1520" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Lambda Event Streaming &amp;amp; Glue ETL Execution Sequence Workflow" vertex="1">
+          <mxGeometry height="36" width="1200" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-panel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C71325;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="820" width="1520" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C71325;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#FFFFFF;fontFace=Arial;" value="Event-Driven Sequence Flow: Kinesis Streams → Lambdas → DynamoDB State → Glue Job → S3 Output" vertex="1">
+          <mxGeometry height="40" width="1520" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontFace=Arial;arcSize=50;" value="Start Taxi Trip Simulation&#xa;(kinesis-trips-producer.py)" vertex="1">
+          <mxGeometry height="60" width="240" x="680" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="Stream 1: trip_start_stream" vertex="1">
+          <mxGeometry height="50" width="240" x="320" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="Stream 2: trip_end_stream" vertex="1">
+          <mxGeometry height="50" width="240" x="1040" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-l1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;" value="Lambda: trip-start-processing&#xa;(Parses start event &amp;amp; converts fare decimal)" vertex="1">
+          <mxGeometry height="70" width="280" x="300" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-l2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1A237E;" value="Lambda: trip-end-processing&#xa;(Updates trip details &amp;amp; calls boto3 start_job_run)" vertex="1">
+          <mxGeometry height="70" width="280" x="1020" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-ddb" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#0D47A1;" value="🗄️ DynamoDB Table: trip_details&#xa;(Partition Key: trip_id)" vertex="1">
+          <mxGeometry height="110" width="360" x="620" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-glue" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#009688;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#004D40;" value="⚙️ AWS Glue Job: process_completed_trips&#xa;(Scans trip_details, aggregates daily totals &amp;amp; revenue)" vertex="1">
+          <mxGeometry height="80" width="380" x="970" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;fontColor=#1B5E20;" value="Amazon S3 Output Lake&lt;br&gt;s3://dcn-dataengg/taxi_trips/completed_trips/&lt;br&gt;aggregated_results_&amp;lt;timestamp&amp;gt;.json" vertex="1">
+          <mxGeometry height="90" width="380" x="970" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c1" edge="1" parent="1" source="wf-start" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="wf-s1" value="Trip Start">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c2" edge="1" parent="1" source="wf-start" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="wf-s2" value="Trip End">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c3" edge="1" parent="1" source="wf-s1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="wf-l1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c4" edge="1" parent="1" source="wf-s2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;" target="wf-l2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c5" edge="1" parent="1" source="wf-l1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;entryX=0.311;entryY=0.021;entryDx=0;entryDy=0;entryPerimeter=0;" target="wf-ddb" value="Inserts Trip State">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c6" edge="1" parent="1" source="wf-l2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3F51B5;strokeWidth=2;entryX=0.654;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;" target="wf-ddb" value="Updates Trip State">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c7" edge="1" parent="1" source="wf-l2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="wf-glue" value="Triggers Glue Job">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wf-c8" edge="1" parent="1" source="wf-ddb" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#009688;strokeWidth=2;" target="wf-glue" value="Scans Table">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wf-c9" edge="1" parent="1" source="wf-glue" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4CAF50;strokeWidth=2;" target="wf-s3" value="Writes JSON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-techstack" name="AWS Tech Stack &amp; Services">
+    <mxGraphModel dx="1989" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ts-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#232F3E;" value="AWS Services &amp;amp; Infrastructure Specifications Overview" vertex="1">
+          <mxGeometry height="40" width="800" x="400" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#555555;" value="Use case: Streaming Taxi Trips Pipeline using Kinesis, Lambda, DynamoDB, Glue &amp;amp; Amazon S3" vertex="1">
+          <mxGeometry height="25" width="900" x="350" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-group" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="AWS Services Breakdown &amp;amp; Infrastructure Configurations" vertex="1">
+          <mxGeometry height="880" width="1120" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-1-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#E65100;" value="1: Amazon Kinesis Data Streams" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-1-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Real-Time Event Streaming Router&lt;/b&gt;&#xa;• Stream 1: trip_start_stream (Trip start telemetry events)&#xa;• Stream 2: trip_end_stream (Trip end telemetry events)" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#B71C1C;" value="2: AWS Lambda Functions" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Serverless Event Processing Functions&lt;/b&gt;&#xa;• Handler 1: trip-start-processing (Inserts new trip record into DynamoDB)&#xa;• Handler 2: trip-end-processing (Updates completed trip state &amp;amp; triggers Glue)" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#311B92;" value="3: Amazon DynamoDB State Store" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Real-Time State Tracking Table&lt;/b&gt;&#xa;• Table Name: trip_details&#xa;• Primary Key: trip_id (String)" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#4A148C;" value="4: AWS Glue ETL Job" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Serverless Batch Aggregation Engine&lt;/b&gt;&#xa;• Job Name: process_completed_trips (glue/glue-process-data.py)&#xa;• Operation: Scans DynamoDB trip_details, aggregates daily totals, outputs to S3" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-5-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#01579B;" value="5: Amazon S3 Data Lake" vertex="1">
+          <mxGeometry height="55" width="340" x="40" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-5-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Analytics Object Storage Lake&lt;/b&gt;&lt;br&gt;• Bucket: s3://dcn-dataengg/&lt;br&gt;• Prefix: taxi_trips/completed_trips/" vertex="1">
+          <mxGeometry height="55" width="670" x="410" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-6-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#37474F;" value="6: IAM Security Role" vertex="1">
+          <mxGeometry height="75" width="340" x="40" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-6-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Unified Security Governance&lt;/b&gt;&#xa;• Role Name: dcn-dataengg-streaming-lambda&#xa;• Policies: AmazonKinesisFullAccess, AmazonDynamoDBFullAccess, AWSGlueConsoleFullAccess, CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="75" width="670" x="410" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-7-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1A237E;" value="7: Kinesis Producer Script" vertex="1">
+          <mxGeometry height="80" width="340" x="40" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-7-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Event Generator Logic&lt;/b&gt;&#xa;• Script: kinesis/kinesis-trips-producer.py&#xa;• Inputs: data/trip_start.csv &amp;amp; data/trip_end.csv" vertex="1">
+          <mxGeometry height="80" width="670" x="410" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-8-title" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1B5E20;" value="8: Output JSON Assets" vertex="1">
+          <mxGeometry height="95" width="340" x="40" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-8-desc" parent="ts-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontSize=12;fontColor=#263238;align=left;spacingLeft=15;" value="&lt;b&gt;Aggregated Analytics Reports&lt;/b&gt;&#xa;• Filename: aggregated_results_&amp;lt;timestamp&amp;gt;.json&#xa;• Metrics: Daily completed trip volume, total revenue, average fare, total distance, passenger counts" vertex="1">
+          <mxGeometry height="95" width="670" x="410" y="660" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

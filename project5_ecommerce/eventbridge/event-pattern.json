@@ -1,0 +1,22 @@
+{
+  "source": [
+    "aws.s3"
+  ],
+  "detail-type": [
+    "Object Created"
+  ],
+  "detail": {
+    "bucket": {
+      "name": [
+        "dcn-dataengg"
+      ]
+    },
+    "object": {
+      "key": [
+        {
+          "prefix": "ecommerce-data/new/order_items"
+        }
+      ]
+    }
+  }
+}

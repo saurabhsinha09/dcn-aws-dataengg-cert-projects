@@ -1,0 +1,38 @@
+{
+    "Comment": "Run Spark jobs on EMR Serverless sequentially",
+    "StartAt": "RunSparkJob1",
+    "States": {
+        "RunSparkJob1": {
+            "Type": "Task",
+            "Resource": "arn:aws:states:::emr-serverless:startJobRun.sync",
+            "Parameters": {
+                "ApplicationId": "00g7s5rb6tktcf1t",
+                "ExecutionRoleArn": "arn:aws:iam::<aws-account-id>:role/dcn-dataengg-emr-serverless-role",
+                "Name": "SparkJob1-Aggregation",
+                "JobDriver": {
+                    "SparkSubmit": {
+                        "EntryPoint": "s3://dcn-dataengg/spark-scripts/spark-agg1.py"
+                    }
+                }
+            },
+            "ResultPath": "$.job1Result",
+            "Next": "RunSparkJob2"
+        },
+        "RunSparkJob2": {
+            "Type": "Task",
+            "Resource": "arn:aws:states:::emr-serverless:startJobRun.sync",
+            "Parameters": {
+                "ApplicationId": "00g7s5rb6tktcf1t",
+                "ExecutionRoleArn": "arn:aws:iam::<aws-account-id>:role/dcn-dataengg-emr-serverless-role",
+                "Name": "SparkJob2-Aggregation",
+                "JobDriver": {
+                    "SparkSubmit": {
+                        "EntryPoint": "s3://dcn-dataengg/spark-scripts/spark-agg2.py"
+                    }
+                }
+            },
+            "ResultPath": "$.job2Result",
+            "End": true
+        }
+    }
+}

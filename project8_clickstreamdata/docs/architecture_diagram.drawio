@@ -1,0 +1,359 @@
+<mxfile host="app.diagrams.net" agent="Antigravity AI Agent" pages="5">
+  <diagram id="page-overview" name="Overview">
+    <mxGraphModel dx="1989" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ov-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="760" width="1330" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1330" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-4" parent="1" style="text;html=1;fontSize=17;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Use case: Real-Time Clickstream Data Ingestion &amp;amp; Analytics Pipeline using &lt;b&gt;Amazon Kinesis&lt;/b&gt;, &lt;b&gt;AWS Lambda&lt;/b&gt;, &lt;b&gt;Kinesis Firehose&lt;/b&gt; &amp;amp; &lt;b&gt;Redshift Serverless&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="1120" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8D6E63;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="190" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;labelBackgroundColor=none;sketch=0;fillColor=#8D6E63;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="140" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#8D6E63;fontFace=Arial;align=center;" value="Event Producer&#xa;Python Script" vertex="1">
+          <mxGeometry height="40" width="180" x="75" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;kinesis-events-producer.py&lt;/b&gt;&#xa;• Reads data/events.csv&#xa;• Emits JSON clickstream events&#xa;• Partitioning by event id&#xa;• Real-time streaming stream" vertex="1">
+          <mxGeometry height="100" width="180" x="75" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="280" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.kinesis;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="355" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="Amazon Kinesis&#xa;Data Stream" vertex="1">
+          <mxGeometry height="40" width="180" x="290" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Data Stream:&lt;/b&gt;&#xa;• &lt;b&gt;app_clickstream_events&lt;/b&gt;&#xa;  (Real-time clickstream events)&#xa;• Scalable entry buffer&#xa;• Region: ap-south-1" vertex="1">
+          <mxGeometry height="100" width="180" x="290" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-fh-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E05243;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="500" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-fh-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.kinesis_data_firehose;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="575" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-fh-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#E05243;fontFace=Arial;align=center;" value="Kinesis Data&#xa;Firehose Stream" vertex="1">
+          <mxGeometry height="40" width="180" x="510" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-fh-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Delivery Stream:&lt;/b&gt;&#xa;• &lt;b&gt;KDS-RED-Event&lt;/b&gt;&#xa;• Triggers Lambda enrichment&#xa;• Buffers &amp;amp; writes CSV to S3&#xa;• Issues COPY to Redshift" vertex="1">
+          <mxGeometry height="110" width="180" x="510" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="220" x="720" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="805" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="AWS Lambda&#xa;Enrichment Function" vertex="1">
+          <mxGeometry height="40" width="200" x="730" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-lmb-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;clickstream_events_enrichment&lt;/b&gt;&#xa;• In-flight Base64 decoding&#xa;• Adds &lt;b&gt;is_mobile&lt;/b&gt; flag&#xa;• Adds &lt;b&gt;traffic_source_category&lt;/b&gt;&#xa;• Returns formatted CSV string" vertex="1">
+          <mxGeometry height="110" width="200" x="730" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E73B8;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="180" x="960" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#2E73B8;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1025" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="Amazon S3&#xa;Staging Bucket" vertex="1">
+          <mxGeometry height="40" width="160" x="970" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Bucket:&lt;/b&gt; dcn-dataengg&#xa;• Intermediate CSV staging&#xa;• Backup data lake layer&#xa;• Automatically read by COPY" vertex="1">
+          <mxGeometry height="110" width="160" x="970" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-red-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8E24AA;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="1160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-red-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.redshift;labelBackgroundColor=none;sketch=0;fillColor=#8E24AA;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1235" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-red-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#8E24AA;fontFace=Arial;align=center;" value="Amazon Redshift&#xa;Serverless DW" vertex="1">
+          <mxGeometry height="40" width="180" x="1170" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-red-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;DB:&lt;/b&gt; clickstream_db&#xa;&lt;b&gt;Schema:&lt;/b&gt; prod_schema&#xa;&lt;b&gt;Table:&lt;/b&gt; events&#xa;• Enriched analytics warehouse&#xa;• High performance SQL" vertex="1">
+          <mxGeometry height="110" width="180" x="1170" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-c1" edge="1" parent="1" source="ov-prod-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-kin-box" value="Ingests JSON">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c2" edge="1" parent="1" source="ov-kin-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-fh-box" value="Source Stream">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c3" edge="1" parent="1" source="ov-fh-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-lmb-box" value="Invokes Lambda">
+          <mxGeometry relative="1" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c4" edge="1" parent="1" source="ov-lmb-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-s3-box" value="Returns CSV to S3">
+          <mxGeometry relative="1" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c5" edge="1" parent="1" source="ov-s3-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-red-box" value="Firehose COPY">
+          <mxGeometry relative="1" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-btm-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="255" width="1000" x="200" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-title" parent="1" style="text;html=1;fontSize=18;fontStyle=1;fontColor=#232F3E;fontFace=Arial;align=center;" value="🎯 Streaming Enrichment Objectives &amp;amp; Architecture Features" vertex="1">
+          <mxGeometry height="30" width="600" x="400" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=12;fontColor=#1B5E20;align=left;spacingLeft=15;" value="✅ &lt;b&gt;In-Flight Lambda Data Enrichment:&lt;/b&gt;&#xa;Evaluates user browser strings to derive &lt;b&gt;is_mobile&lt;/b&gt; (&#39;Yes&#39;/&#39;No&#39;) and categorizes referrers into &lt;b&gt;traffic_source_category&lt;/b&gt; (&#39;Search Engine&#39;, &#39;Social Media&#39;, &#39;Email&#39;, &#39;Direct&#39;)." vertex="1">
+          <mxGeometry height="50" width="940" x="230" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=12;fontColor=#1B5E20;align=left;spacingLeft=15;" value="✅ &lt;b&gt;Serverless Data Delivery &amp;amp; COPY Automation:&lt;/b&gt;&#xa;Kinesis Firehose buffers enriched micro-batches into S3 bucket (&lt;i&gt;dcn-dataengg&lt;/i&gt;) and executes automated COPY commands into Redshift." vertex="1">
+          <mxGeometry height="50" width="940" x="230" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=12;fontColor=#1B5E20;align=left;spacingLeft=15;" value="✅ &lt;b&gt;Data Warehousing &amp;amp; Analytics:&lt;/b&gt;&#xa;Stores enriched events in Amazon Redshift Serverless table (&lt;i&gt;clickstream_db.prod_schema.events&lt;/i&gt;) for fast SQL analysis." vertex="1">
+          <mxGeometry height="50" width="940" x="230" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-footer-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=1;fontSize=12;fontStyle=1;fontColor=#311B92;fontFace=Arial;" value="Real-Time Clickstream Pipeline: Ingests event logs, transforms &amp;amp; enriches payloads in-flight via AWS Lambda, buffers through Kinesis Firehose, and loads directly into Amazon Redshift Serverless." vertex="1">
+          <mxGeometry height="35" width="1290" x="55" y="750" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-master" name="Master System Architecture">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1620" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🌐 Real-Time Clickstream Data Engineering Pipeline: Kinesis Data Stream → Kinesis Firehose → AWS Lambda Enrichment → S3 Staging → Redshift Serverless" vertex="1">
+          <mxGeometry height="36" width="1450" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp1" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="1. Data Ingestion (Producer)" vertex="1">
+          <mxGeometry height="620" width="240" x="30" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-file" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#78909C;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#263238;" value="📄 &lt;b&gt;data/events.csv&lt;/b&gt;&#xa;• Clickstream Telemetry Dataset&#xa;• (id, user_id, session_id,&#xa;  ip_address, city, state,&#xa;  browser, traffic_source,&#xa;  uri, event_type)" vertex="1">
+          <mxGeometry height="110" width="200" x="50" y="281" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-prod" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFEBE9;strokeColor=#8D6E63;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4E342E;" value="⚙️ Python Producer Script&#xa;&lt;b&gt;kinesis-events-producer.py&lt;/b&gt;&#xa;• boto3 kinesis client&#xa;• PartitionKey: str(record[&#39;id&#39;])&#xa;• Emits JSON to Kinesis&#xa;• Time delay: 1s per record" vertex="1">
+          <mxGeometry height="120" width="200" x="50" y="441" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-payload" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF9C4;strokeColor=#FBC02D;strokeWidth=1.5;fontSize=11;fontColor=#F57F17;" value="💡 &lt;b&gt;JSON Event Payload&lt;/b&gt;&#xa;Single clickstream event&#xa;JSON object put into&#xa;Kinesis stream" vertex="1">
+          <mxGeometry height="90" width="200" x="50" y="601" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp2" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="2. Kinesis Data Stream" vertex="1">
+          <mxGeometry height="620" width="240" x="290" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-kin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📡 Amazon Kinesis Stream&#xa;&lt;b&gt;app_clickstream_events&lt;/b&gt;&#xa;---------------------------------&#xa;• High-throughput buffer&#xa;• Region: ap-south-1&#xa;• Serves as source for&#xa;  Kinesis Firehose" vertex="1">
+          <mxGeometry height="160" width="200" x="310" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#37474F;" value="IAM Permission:&#xa;Kinesis PutRecord Access&#xa;• Allows producer script&#xa;  to push stream records" vertex="1">
+          <mxGeometry height="90" width="200" x="310" y="599" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp3" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="3. Kinesis Data Firehose" vertex="1">
+          <mxGeometry height="620" width="250" x="550" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-fh" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="🔥 Kinesis Delivery Stream&#xa;&lt;b&gt;KDS-RED-Event&lt;/b&gt;&#xa;---------------------------------&#xa;• Source: app_clickstream_events&#xa;• Data Transformation enabled&#xa;• Calls Lambda enrichment&#xa;• Buffers &amp;amp; batches records&#xa;• Destination: Redshift" vertex="1">
+          <mxGeometry height="180" width="210" x="570" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#37474F;" value="IAM Firehose Execution Role:&#xa;• AmazonKinesisFullAccess&#xa;• AWSLambdaRole&#xa;• AmazonS3FullAccess&#xa;• AmazonRedshiftFullAccess" vertex="1">
+          <mxGeometry height="110" width="210" x="570" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp4" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="4. Serverless Transformation" vertex="1">
+          <mxGeometry height="620" width="270" x="820" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-lmb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="⚡ AWS Lambda Function&#xa;&lt;b&gt;clickstream_events_enrichment&lt;/b&gt;&#xa;(&lt;i&gt;lambda/lambda.py&lt;/i&gt;)&#xa;---------------------------------&#xa;1. Decodes Base64 JSON batch&#xa;2. Derives &lt;b&gt;is_mobile&lt;/b&gt; (&#39;Yes&#39;/&#39;No&#39;)&#xa;3. Derives &lt;b&gt;traffic_source_category&lt;/b&gt;&#xa;4. Formats quoted CSV string&#xa;5. Encodes Base64 &amp;amp; returns &#39;Ok&#39;" vertex="1">
+          <mxGeometry height="200" width="230" x="840" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp5" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="5. Staging Storage (S3)" vertex="1">
+          <mxGeometry height="620" width="250" x="1110" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontColor=#0D47A1;" value="S3 Bucket: dcn-dataengg&lt;br&gt;Staging &amp;amp; Backup" vertex="1">
+          <mxGeometry height="90" width="210" x="1130" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-csv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=8;" value="📄 &lt;b&gt;Enriched CSV Batches&lt;/b&gt;&#xa;• Staged CSV files written by Firehose&#xa;• Prepared for Redshift COPY" vertex="1">
+          <mxGeometry height="80" width="210" x="1130" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp6" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="6. Redshift Data Warehouse" vertex="1">
+          <mxGeometry height="620" width="260" x="1380" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-red" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#F3E5F5;strokeColor=#8E24AA;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4A148C;" value="🗄️ Amazon Redshift Serverless&#xa;&lt;b&gt;Database:&lt;/b&gt; clickstream_db&#xa;&lt;b&gt;Schema:&lt;/b&gt; prod_schema&#xa;&lt;b&gt;Table:&lt;/b&gt; events&#xa;---------------------------------&#xa;• Automated COPY command&#xa;• Enriched analytics schema&#xa;• Interactive SQL querying" vertex="1">
+          <mxGeometry height="220" width="220" x="1400" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c1" edge="1" parent="1" source="m-g1-file" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g1-prod" value="Reads CSV">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c2" edge="1" parent="1" source="m-g1-prod" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g2-kin" value="Pushes JSON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c3" edge="1" parent="1" source="m-g2-kin" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g3-fh" value="Stream Source">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c4" edge="1" parent="1" source="m-g3-fh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;exitX=1.007;exitY=0.644;exitDx=0;exitDy=0;exitPerimeter=0;" target="m-g4-lmb" value="Invoke Batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c5" edge="1" parent="1" source="m-g4-lmb" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g3-fh" value="Return Enriched CSV">
+          <mxGeometry relative="1" x="-0.0909" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="800" y="320" />
+              <mxPoint x="800" y="380" />
+              <mxPoint x="780" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c6" edge="1" parent="1" source="m-g3-fh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-s3" value="Buffer CSV">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c7" edge="1" parent="1" source="m-g5-s3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g6-red" value="COPY Command">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-dataflow" name="Detailed Pipeline &amp; Transformation Workflow">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="df-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="560" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="df-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="df-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="df-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="📊 AWS Lambda Record-Level In-Flight Transformation &amp;amp; Firehose Delivery Workflow" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="df-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📡 Kinesis Firehose Micro-Batch&#xa;---------------------------------&#xa;• Receives batch of JSON records&#xa;• Encoded in Base64" vertex="1">
+          <mxGeometry height="110" width="216" x="54" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#0D47A1;" value="1. Decode &amp;amp; Parse&#xa;---------------------------------&#xa;• base64.b64decode(record[&#39;data&#39;])&#xa;• json.loads(payload_str)" vertex="1">
+          <mxGeometry height="110" width="195" x="375" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=10;" value="2. Derivation Logic (Enrichment):&#xa;---------------------------------&#xa;• &lt;b&gt;is_mobile:&lt;/b&gt;&#xa;  Checks browser for [&#39;Mobile&#39;, &#39;iPhone&#39;, &#39;Android&#39;, &#39;iPad&#39;]&#xa;  → Set &#39;Yes&#39; if found, else &#39;No&#39;&#xa;&#xa;• &lt;b&gt;traffic_source_category:&lt;/b&gt;&#xa;  Google/Bing → &#39;Search Engine&#39;&#xa;  Facebook/YouTube → &#39;Social Media&#39;&#xa;  Email → &#39;Email&#39;, Default → &#39;Direct&#39;" vertex="1">
+          <mxGeometry height="180" width="255" x="705" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="df-s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#FF6F00;" value="3. Format &amp;amp; Base64 Encode&#xa;---------------------------------&#xa;• Quotes every field into CSV row:&#xa;  &lt;i&gt;&quot;id&quot;,&quot;user_id&quot;,&quot;session_id&quot;,...,&quot;is_mobile&quot;,&quot;traffic_source_category&quot;...&lt;/i&gt;&#xa;• base64.b64encode(csv_str)&#xa;• Assigns result: &#39;Ok&#39;, recordId" vertex="1">
+          <mxGeometry height="140" width="370" x="1070" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="df-deliv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#8E24AA;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4A148C;align=left;spacingLeft=15;" value="🚚 &lt;b&gt;Firehose Automated Delivery &amp;amp; Redshift Loading:&lt;/b&gt;&#xa;--------------------------------------------------------------------------------------------------&#xa;1. Firehose receives enriched CSV payload response with result: &#39;Ok&#39;.&#xa;2. Firehose buffers micro-batch and writes CSV files to S3 staging bucket (&lt;i&gt;s3://dcn-dataengg&lt;/i&gt;).&#xa;3. Firehose triggers automated &lt;b&gt;COPY&lt;/b&gt; command into Amazon Redshift Serverless table &lt;b&gt;prod_schema.events&lt;/b&gt;." vertex="1">
+          <mxGeometry height="130" width="1290" x="70" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c1" edge="1" parent="1" source="df-in" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-s1" value="Batch Record">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c2" edge="1" parent="1" source="df-s1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-s2" value="Parsed JSON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c3" edge="1" parent="1" source="df-s2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-s3" value="Enriched Dict">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c4" edge="1" parent="1" source="df-s3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-deliv" value="Firehose Result Payload">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1200" y="380" />
+              <mxPoint x="715" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-redshift" name="Redshift Serverless &amp; Data Warehouse Schema">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rs-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="680" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rs-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rs-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="rs-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🗄️ Amazon Redshift Serverless Database Architecture &amp;amp; Schema Design" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="rs-info" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#8E24AA;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4A148C;align=left;spacingLeft=15;" value="🏢 &lt;b&gt;Redshift Serverless Environment Specifications:&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Database Name:&lt;/b&gt; clickstream_db&#xa;• &lt;b&gt;Database Schema:&lt;/b&gt; prod_schema&#xa;• &lt;b&gt;Target Table:&lt;/b&gt; events&#xa;• &lt;b&gt;Region:&lt;/b&gt; ap-south-1" vertex="1">
+          <mxGeometry height="140" width="400" x="80" y="254" as="geometry" />
+        </mxCell>
+        <mxCell id="rs-tbl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1976D2;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;align=left;spacingLeft=15;" value="📊 &lt;b&gt;Target Table Schema:&lt;/b&gt; &lt;i&gt;prod_schema.events&lt;/i&gt;&#xa;------------------------------------------------------------------------------------------&#xa;1. &lt;b&gt;id&lt;/b&gt; (BIGINT) - Unique Event Identifier&#xa;2. &lt;b&gt;user_id&lt;/b&gt; (BIGINT) - User ID&#xa;3. &lt;b&gt;session_id&lt;/b&gt; (CHAR(36)) - Unique Session Identifier&#xa;4. &lt;b&gt;ip_address&lt;/b&gt; (VARCHAR(50)) - Client IP Address&#xa;5. &lt;b&gt;city&lt;/b&gt; (VARCHAR(255)) - Geolocation City&#xa;6. &lt;b&gt;state&lt;/b&gt; (VARCHAR(255)) - Geolocation State&#xa;7. &lt;b&gt;browser&lt;/b&gt; (VARCHAR(50)) - Client User-Agent Browser String&#xa;8. ⭐ &lt;b&gt;is_mobile&lt;/b&gt; (VARCHAR(3)) - Enriched Device Flag (&#39;Yes&#39;/&#39;No&#39;)&#xa;9. &lt;b&gt;traffic_source&lt;/b&gt; (VARCHAR(50)) - Referrer Source URL&#xa;10. ⭐ &lt;b&gt;traffic_source_category&lt;/b&gt; (VARCHAR(50)) - Enriched Traffic Category&#xa;11. &lt;b&gt;uri&lt;/b&gt; (VARCHAR(255)) - Visited Page Path&#xa;12. &lt;b&gt;event_type&lt;/b&gt; (VARCHAR(50)) - User Action Type (&#39;pageview&#39;, &#39;click&#39;)" vertex="1">
+          <mxGeometry height="330" width="850" x="520" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rs-uc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=15;" value="📈 &lt;b&gt;Analytics &amp;amp; Business Intelligence Queries Supported:&lt;/b&gt;&#xa;------------------------------------------------------------------------------------------------------------------------------------------&#xa;• &lt;b&gt;Device Segment Analysis:&lt;/b&gt; &lt;i&gt;SELECT is_mobile, COUNT(*) FROM prod_schema.events GROUP BY is_mobile;&lt;/i&gt;&#xa;• &lt;b&gt;Traffic Attribution Modeling:&lt;/b&gt; &lt;i&gt;SELECT traffic_source_category, COUNT(DISTINCT user_id) FROM prod_schema.events GROUP BY 1;&lt;/i&gt;&#xa;• &lt;b&gt;User Funnel &amp;amp; Pageview Trends:&lt;/b&gt; &lt;i&gt;SELECT uri, event_type, COUNT(*) FROM prod_schema.events GROUP BY uri, event_type;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="160" width="1290" x="80" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-techstack" name="AWS Tech Stack &amp; Services">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ts-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="530" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🛠️ AWS Infrastructure Specifications &amp;amp; Service Configuration Architecture" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-kinesis" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;align=left;spacingLeft=15;" value="📡 &lt;b&gt;Data Ingestion Layer&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Kinesis Stream:&lt;/b&gt; app_clickstream_events&#xa;• &lt;b&gt;Region:&lt;/b&gt; ap-south-1&#xa;• &lt;b&gt;Producer Script:&lt;/b&gt; kinesis-events-producer.py&#xa;• &lt;b&gt;Partition Key Strategy:&lt;/b&gt; str(record[&#39;id&#39;])" vertex="1">
+          <mxGeometry height="140" width="420" x="80" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-firehose" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;align=left;spacingLeft=15;" value="🔥 &lt;b&gt;Streaming Data Delivery Layer&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Firehose Stream:&lt;/b&gt; KDS-RED-Event&#xa;• &lt;b&gt;Source:&lt;/b&gt; app_clickstream_events&#xa;• &lt;b&gt;Transformation:&lt;/b&gt; Enabled (AWS Lambda)&#xa;• &lt;b&gt;Destination:&lt;/b&gt; Amazon Redshift Serverless&#xa;• &lt;b&gt;Staging Bucket:&lt;/b&gt; dcn-dataengg" vertex="1">
+          <mxGeometry height="140" width="420" x="540" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-lambda" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#FF6F00;align=left;spacingLeft=15;" value="⚡ &lt;b&gt;Serverless Transformation Layer&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Lambda Function:&lt;/b&gt; clickstream_events_enrichment&#xa;• &lt;b&gt;Script Path:&lt;/b&gt; lambda/lambda.py&#xa;• &lt;b&gt;Runtime:&lt;/b&gt; Python 3.x&#xa;• &lt;b&gt;Transformation:&lt;/b&gt; Enriches is_mobile &amp;amp; traffic_source_category" vertex="1">
+          <mxGeometry height="140" width="420" x="1000" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;align=left;spacingLeft=15;" value="🪣 &lt;b&gt;Staging &amp;amp; Storage Layer&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;S3 Bucket:&lt;/b&gt; dcn-dataengg&#xa;• &lt;b&gt;Purpose:&lt;/b&gt; Intermediate CSV staging &amp;amp; raw backup&#xa;• &lt;b&gt;Access:&lt;/b&gt; Automatically read by Redshift COPY" vertex="1">
+          <mxGeometry height="140" width="420" x="80" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-redshift" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4A148C;align=left;spacingLeft=15;" value="🗄️ &lt;b&gt;Data Warehousing Layer&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Engine:&lt;/b&gt; Amazon Redshift Serverless&#xa;• &lt;b&gt;Database:&lt;/b&gt; clickstream_db&#xa;• &lt;b&gt;Schema:&lt;/b&gt; prod_schema&#xa;• &lt;b&gt;Target Table:&lt;/b&gt; events" vertex="1">
+          <mxGeometry height="140" width="420" x="540" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#546E7A;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#263238;align=left;spacingLeft=15;" value="🔒 &lt;b&gt;IAM Roles &amp;amp; Security Model&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;FirehoseExecutionRole:&lt;/b&gt; Kinesis read, Lambda invoke, S3 write, Redshift COPY&#xa;• &lt;b&gt;LambdaExecutionRole:&lt;/b&gt; CloudWatch logs execution" vertex="1">
+          <mxGeometry height="140" width="420" x="1000" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-footer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#004D40;align=center;" value="DCN AWS Data Engineering Certification Project #8 — Real-Time Clickstream Ingestion, Lambda Enrichment &amp;amp; Redshift Serverless Data Warehouse" vertex="1">
+          <mxGeometry height="40" width="1340" x="80" y="500" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,458 @@
+<mxfile host="app.diagrams.net" agent="Antigravity AI Agent" pages="5">
+  <diagram id="page-overview" name="Overview">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ov-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="760" width="1350" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1350" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-4" parent="1" style="text;html=1;fontSize=17;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="Use case: Real-Time Telecom Data Streaming &amp;amp; Analytics Pipeline using &lt;b&gt;Amazon Kinesis&lt;/b&gt;, &lt;b&gt;AWS Glue&lt;/b&gt;, &lt;b&gt;Amazon S3&lt;/b&gt;, &lt;b&gt;Athena&lt;/b&gt; &amp;amp; &lt;b&gt;AWS ECS Fargate&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="1120" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8D6E63;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="160" x="58" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;labelBackgroundColor=none;sketch=0;fillColor=#8D6E63;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="115" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#8D6E63;fontFace=Arial;align=center;" value="Data Producer&#xa;Kinesis Script" vertex="1">
+          <mxGeometry height="40" width="145" x="63" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-prod-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;kinesis-producer.py&lt;/b&gt;&#xa;• Reads mobile-logs.csv&#xa;• Emits JSON event streams&#xa;• Partitioning by hour hash&#xa;• Batch logs every 100 recs" vertex="1">
+          <mxGeometry height="100" width="145" x="63" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="160" x="280" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.kinesis;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="335" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="Amazon Kinesis&#xa;Data Streams" vertex="1">
+          <mxGeometry height="40" width="145" x="285" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-kin-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Streaming Stream:&lt;/b&gt;&#xa;• &lt;b&gt;mobile_coverage_logs&lt;/b&gt;&#xa;  (Real-time telemetry logs)&#xa;• High throughput ingestion&#xa;• Region: ap-south-1" vertex="1">
+          <mxGeometry height="100" width="145" x="290" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E05243;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="190" x="500" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;labelBackgroundColor=none;sketch=0;fillColor=#FF9900;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="570" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#FF9900;fontFace=Arial;align=center;" value="AWS Glue&#xa;Spark Streaming" vertex="1">
+          <mxGeometry height="40" width="180" x="505" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-glue-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Job:&lt;/b&gt; network_streaming_logs&#xa;• PySpark Structured Streaming&#xa;• 2-min tumbling windows&#xa;• 2-min watermark handling&#xa;• Writes Parquet to S3" vertex="1">
+          <mxGeometry height="110" width="160" x="510" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E73B8;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="180" x="740" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;labelBackgroundColor=none;sketch=0;fillColor=#E05243;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="807" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#2E73B8;fontFace=Arial;align=center;" value="S3 Data Lake &amp;amp;&#xa;Glue Catalog" vertex="1">
+          <mxGeometry height="40" width="160" x="750" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-s3-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;S3 Bucket:&lt;/b&gt; dcn-dataengg&lt;br&gt;• telecom_logs/aggregations/&lt;br&gt;&lt;br&gt;&lt;b&gt;Glue Catalog DB:&lt;/b&gt;&lt;br&gt;mobile_network_aggregations&lt;br&gt;• 3 Glue Crawlers" vertex="1">
+          <mxGeometry height="110" width="160" x="750" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ath-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8E24AA;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="160" x="960" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ath-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.athena;labelBackgroundColor=none;sketch=0;fillColor=#8E24AA;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1014" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ath-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#8E24AA;fontFace=Arial;align=center;" value="Amazon Athena&#xa;Query Engine" vertex="1">
+          <mxGeometry height="40" width="136" x="974" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ath-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Serverless SQL Engine:&lt;/b&gt;&#xa;• Queries Parquet tables&#xa;• Output location:&#xa;  telecom_logs/query_output/&#xa;• Instant analytical response" vertex="1">
+          <mxGeometry height="110" width="160" x="970" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B5E20;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="200" x="1173" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;labelBackgroundColor=none;sketch=0;fillColor=#1B5E20;gradientColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="1248" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-title" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#1B5E20;fontFace=Arial;align=center;" value="AWS ECS Fargate&#xa;Streamlit App" vertex="1">
+          <mxGeometry height="40" width="180" x="1183" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-ecs-desc" parent="1" style="text;html=1;fontSize=12;fontColor=#444444;fontFace=Arial;align=left;" value="&lt;b&gt;Cluster:&lt;/b&gt; dcn-telecom-data-cluster&#xa;&lt;b&gt;Container:&lt;/b&gt; mobile-monitor-app&#xa;&lt;b&gt;ECR Repo:&lt;/b&gt; telecom-provider-app&#xa;• Real-time monitoring UI&#xa;• 15-min auto-refresh loop" vertex="1">
+          <mxGeometry height="110" width="180" x="1183" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-c1" edge="1" parent="1" source="ov-prod-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-kin-box" value="Ingests JSON">
+          <mxGeometry relative="1" x="-0.2" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c2" edge="1" parent="1" source="ov-kin-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-glue-box" value="Streams Data">
+          <mxGeometry relative="1" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c3" edge="1" parent="1" source="ov-glue-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-s3-box" value="Writes Parquet">
+          <mxGeometry relative="1" x="0.2" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c4" edge="1" parent="1" source="ov-s3-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-ath-box" value="Scans &amp;amp; Queries">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-c5" edge="1" parent="1" source="ov-ath-box" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" target="ov-ecs-box" value="Serves Analytics">
+          <mxGeometry relative="1" x="0.1321" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-btm-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="245" width="1000" x="200" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-title" parent="1" style="text;html=1;fontSize=18;fontStyle=1;fontColor=#232F3E;fontFace=Arial;align=center;" value="🎯 Streaming Aggregation Objectives &amp;amp; Key Metrics" vertex="1">
+          <mxGeometry height="30" width="600" x="400" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=12;fontColor=#1B5E20;align=left;spacingLeft=15;" value="✅ &lt;b&gt;Average Signal Strength by Operator:&lt;/b&gt;&#xa;Calculates average signal per operator and postal code over 2-minute tumbling windows." vertex="1">
+          <mxGeometry height="50" width="940" x="230" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=12;fontColor=#1B5E20;align=left;spacingLeft=15;" value="✅ &lt;b&gt;Average GPS Precision by Provider:&lt;/b&gt;&#xa;Calculates average GPS precision (meters) and satellite count per provider over 2-minute windows." vertex="1">
+          <mxGeometry height="50" width="940" x="230" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-obj-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=12;fontColor=#1B5E20;align=left;spacingLeft=15;" value="✅ &lt;b&gt;Count of Statuses by Postal Code:&lt;/b&gt;&#xa;Counts occurrences of network connection statuses (Connected/Disconnected) per postal code." vertex="1">
+          <mxGeometry height="50" width="940" x="230" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-footer-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;strokeWidth=1;fontSize=12;fontStyle=1;fontColor=#311B92;fontFace=Arial;" value="Real-Time Telecom Data Engineering: Ingests Kinesis telemetry logs continuously, executes windowed PySpark aggregations via AWS Glue, stores Parquet data in S3, and serves live insights via Athena and Streamlit on ECS Fargate." vertex="1">
+          <mxGeometry height="35" width="1290" x="55" y="750" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-master" name="Master System Architecture">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m-hdr-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1620" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-logo" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="m-hdr-title" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="📡 Real-Time Telecom Log Streaming Pipeline: Kinesis Data Stream → AWS Glue Spark Streaming → S3 Data Lake → Glue Crawlers &amp;amp; Data Catalog → Athena → ECS Fargate Streamlit Dashboard" vertex="1">
+          <mxGeometry height="36" width="1450" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp1" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="1. Data Ingestion (Producer)" vertex="1">
+          <mxGeometry height="620" width="240" x="30" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-file" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#78909C;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#263238;" value="📄 &lt;b&gt;mobile-logs.csv&lt;/b&gt;&#xa;• Raw Telemetry Dataset&#xa;• (hour, lat, long, signal,&#xa;  network, operator, status,&#xa;  speed, satellites, precission,&#xa;  provider, postal_code)" vertex="1">
+          <mxGeometry height="110" width="200" x="50" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-prod" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFEBE9;strokeColor=#8D6E63;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4E342E;" value="⚙️ Python Producer Script&#xa;&lt;b&gt;kinesis-producer.py&lt;/b&gt;&#xa;• boto3 kinesis client&#xa;• PartitionKey: hash(hour)&#xa;• Batch size: 100 records&#xa;• Emits JSON to Kinesis" vertex="1">
+          <mxGeometry height="120" width="200" x="50" y="423" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g1-payload" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF9C4;strokeColor=#FBC02D;strokeWidth=1.5;fontSize=11;fontColor=#F57F17;" value="💡 &lt;b&gt;Event Payload&lt;/b&gt;&#xa;JSON String formatted&#xa;telecom telemetry row&#xa;pushed to Kinesis stream" vertex="1">
+          <mxGeometry height="90" width="200" x="50" y="583" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp2" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="2. Real-Time Streaming" vertex="1">
+          <mxGeometry height="620" width="240" x="290" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-kin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📡 Amazon Kinesis Stream&lt;br&gt;&lt;b&gt;mobile_coverage_logs&lt;/b&gt;&lt;br&gt;---------------------------------&lt;br&gt;• ARN: arn:aws:kinesis:&lt;br&gt;...:&lt;br&gt;  stream/mobile_coverage_logs&lt;br&gt;• Starting position: trim_horizon&lt;br&gt;• Real-time data buffer" vertex="1">
+          <mxGeometry height="170" width="200" x="310" y="254" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g2-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#37474F;" value="IAM Role: dcn-dataengg-glue-role&#xa;• AmazonKinesisFullAccess&#xa;• AmazonS3FullAccess&#xa;• AWSGlueServiceRole&#xa;• CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="110" width="220" x="300" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp3" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="3. AWS Glue Spark Streaming" vertex="1">
+          <mxGeometry height="620" width="270" x="550" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-glue" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;" value="⚡ AWS Glue Streaming Job&#xa;&lt;b&gt;network_streaming_logs&lt;/b&gt;&#xa;(&lt;i&gt;mobile_coverage_streaming.py&lt;/i&gt;)&#xa;---------------------------------&#xa;• PySpark Structured Streaming&#xa;• JSON Schema parsing&#xa;• Timestamp synthesis:&#xa;  concat(current_date, &#39; &#39;, hour)&#xa;• Watermark: 2 minutes&#xa;• Tumbling Windows: 2 minutes&#xa;• Trigger interval: 20 seconds" vertex="1">
+          <mxGeometry height="220" width="230" x="570" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g3-aggs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=10;" value="📊 &lt;b&gt;3 Parallel Stream Aggregations:&lt;/b&gt;&#xa;1. &lt;b&gt;signal_strength_by_operator&lt;/b&gt;&#xa;   avg(signal) by operator &amp;amp; postal_code&#xa;2. &lt;b&gt;gps_precision_by_provider&lt;/b&gt;&#xa;   avg(precision &amp;amp; satellites) by provider&#xa;3. &lt;b&gt;status_count&lt;/b&gt;&#xa;   count() by status &amp;amp; postal_code" vertex="1">
+          <mxGeometry height="130" width="230" x="570" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp4" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="4. S3 Data Lake &amp;amp; Checkpoints" vertex="1">
+          <mxGeometry height="620" width="260" x="840" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontColor=#E65100;" value="S3 Bucket: dcn-dataengg&lt;br&gt;telecom_logs/" vertex="1">
+          <mxGeometry height="80" width="220" x="860" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-p1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=1.5;fontSize=11;fontColor=#1B5E20;align=left;spacingLeft=8;" value="📁 &lt;b&gt;aggregations/&lt;/b&gt; (Parquet Format)&#xa;• signal_strength_by_operator/&#xa;• gps_precision_by_provider/&#xa;• status_count/" vertex="1">
+          <mxGeometry height="85" width="220" x="860" y="394" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-p2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=1.5;fontSize=11;fontColor=#FF6F00;align=left;spacingLeft=8;" value="📁 &lt;b&gt;checkpoints/&lt;/b&gt;&#xa;• Streaming state checkpoint locations" vertex="1">
+          <mxGeometry height="50" width="220" x="860" y="499" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g4-p3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#8E24AA;strokeWidth=1.5;fontSize=11;fontColor=#4A148C;align=left;spacingLeft=8;" value="📁 &lt;b&gt;query_output/&lt;/b&gt;&#xa;• Athena SQL execution results" vertex="1">
+          <mxGeometry height="50" width="220" x="860" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp5" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="5. Glue Catalog &amp;amp; Athena" vertex="1">
+          <mxGeometry height="620" width="260" x="1120" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-crawlers" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#E65100;" value="🕷️ &lt;b&gt;3 AWS Glue Crawlers:&lt;/b&gt;&#xa;• signal_strength_by_operator_crawler&#xa;• gps_precision_by_provider_crawler&#xa;• status_count_crawler" vertex="1">
+          <mxGeometry height="90" width="220" x="1140" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-cat" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;" value="🗄️ AWS Glue Data Catalog&#xa;&lt;b&gt;mobile_network_aggregations&lt;/b&gt;&#xa;---------------------------------&#xa;• signal_strength_by_operator&#xa;• gps_precision_by_provider&#xa;• status_count" vertex="1">
+          <mxGeometry height="140" width="220" x="1140" y="404" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g5-ath" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#8E24AA;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4A148C;" value="🔍 Amazon Athena Engine&#xa;• Executes SQL queries on Parquet&#xa;• Standard SQL interface" vertex="1">
+          <mxGeometry height="90" width="220" x="1140" y="611" as="geometry" />
+        </mxCell>
+        <mxCell id="m-grp6" parent="1" style="group;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8F9FA;strokeColor=#B0BEC5;strokeWidth=2;dashed=1;fontStyle=1;fontSize=14;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontColor=#37474F;" value="6. ECS Fargate Dashboard" vertex="1">
+          <mxGeometry height="620" width="260" x="1400" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-ecr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#1B5E20;" value="📦 Amazon ECR Repo&#xa;&lt;b&gt;telecom-provider-app&lt;/b&gt;&#xa;• Container Image: mobile-monitor-app" vertex="1">
+          <mxGeometry height="70" width="220" x="1420" y="297" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-ecs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#1B5E20;" value="🐳 AWS ECS Fargate Task&#xa;&lt;b&gt;dcn-telecom-data-cluster&lt;/b&gt;&#xa;Task Def: task-telecom-network-monitor&#xa;---------------------------------&#xa;• Streamlit App (&lt;i&gt;app.py&lt;/i&gt;)&#xa;• boto3 Athena client polling&#xa;• 15-min auto-refresh countdown" vertex="1">
+          <mxGeometry height="150" width="220" x="1420" y="387" as="geometry" />
+        </mxCell>
+        <mxCell id="m-g6-iam" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ECEFF1;strokeColor=#607D8B;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#37474F;" value="IAM Task Role:&#xa;dcn-ecs-task-execution-role&#xa;• AmazonS3FullAccess&#xa;• AmazonDynamoDBFullAccess&#xa;• CloudWatchLogsFullAccess" vertex="1">
+          <mxGeometry height="100" width="220" x="1420" y="557" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c1" edge="1" parent="1" source="m-g1-file" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g1-prod" value="Reads CSV">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c2" edge="1" parent="1" source="m-g1-prod" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g2-kin" value="Pushes JSON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c3" edge="1" parent="1" source="m-g2-kin" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g3-glue" value="Consumes Stream">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c4" edge="1" parent="1" source="m-g3-glue" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g4-p1" value="Writes Parquet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c5" edge="1" parent="1" source="m-g4-p1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-crawlers" value="Scanned by">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1110" y="436.5" />
+              <mxPoint x="1110" y="307" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m-c6" edge="1" parent="1" source="m-g5-crawlers" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-cat" value="Registers Tables">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c7" edge="1" parent="1" source="m-g5-cat" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="m-g5-ath" value="Metadata Schema">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m-c8" edge="1" parent="1" source="m-g6-ecs" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="m-g5-ath" value="Queries via boto3">
+          <mxGeometry relative="1" x="0.2658" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1420" y="460" />
+              <mxPoint x="1390" y="460" />
+              <mxPoint x="1390" y="656" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-dataflow" name="Detailed Pipeline &amp; Aggregation Workflow">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="df-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="750" width="1470" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="df-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1470" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="df-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="df-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="📊 PySpark Structured Streaming &amp;amp; Tumbling Window Aggregation Workflow" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="df-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;" value="📡 Kinesis Input Stream&#xa;&lt;b&gt;mobile_coverage_logs&lt;/b&gt;&#xa;Raw JSON Telemetry Records" vertex="1">
+          <mxGeometry height="80" width="220" x="56" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="df-prep" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#B71C1C;" value="⚡ Glue Pre-processing &amp;amp; Watermark&#xa;---------------------------------&#xa;• Apply StructType Schema&#xa;• Synthesize Timestamp: concat(current_date, &#39; &#39;, hour)&#xa;• Extract partition_hour: HH&#xa;• Define Watermark: withWatermark(&#39;timestamp&#39;, &#39;2 minutes&#39;)" vertex="1">
+          <mxGeometry height="140" width="280" x="369" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="df-b1-agg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#1B5E20;" value="📈 Stream 1: Signal Strength&#xa;&lt;b&gt;signal_strength_by_operator_df&lt;/b&gt;&#xa;• groupBy(window 2-min, postal_code, operator, partition_hour)&#xa;• agg(avg(&#39;signal&#39;).alias(&#39;average_signal&#39;))" vertex="1">
+          <mxGeometry height="110" width="310" x="731" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="df-b1-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=11;fontColor=#E65100;" value="S3 Output Path:&#xa;s3://.../telecom_logs/aggregations/signal_strength_by_operator/&#xa;Partitioned by: (partition_hour, postal_code)" vertex="1">
+          <mxGeometry height="90" width="345" x="1149" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="df-b2-agg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#0D47A1;" value="📍 Stream 2: GPS Precision&#xa;&lt;b&gt;gps_precision_by_provider_df&lt;/b&gt;&#xa;• groupBy(window 2-min, provider, partition_hour)&#xa;• agg(avg(&#39;precission&#39;).alias(&#39;average_precision&#39;), avg(&#39;satellites&#39;))" vertex="1">
+          <mxGeometry height="110" width="310" x="752" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="df-b2-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=11;fontColor=#E65100;" value="S3 Output Path:&#xa;s3://.../telecom_logs/aggregations/gps_precision_by_provider/&#xa;Partitioned by: (partition_hour, provider)" vertex="1">
+          <mxGeometry height="90" width="345" x="1149" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="df-b3-agg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#4A148C;" value="📶 Stream 3: Status Count&#xa;&lt;b&gt;status_count_df&lt;/b&gt;&#xa;• groupBy(window 2-min, postal_code, status, partition_hour)&#xa;• count().alias(&#39;status_count&#39;)" vertex="1">
+          <mxGeometry height="110" width="310" x="731" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="df-b3-s3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=11;fontColor=#E65100;" value="S3 Output Path:&#xa;s3://.../telecom_logs/aggregations/status_count/&#xa;Partitioned by: (partition_hour, postal_code)" vertex="1">
+          <mxGeometry height="90" width="345" x="1149" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="df-c1" edge="1" parent="1" source="df-in" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-prep" value="Raw Records">
+          <mxGeometry relative="1" x="-0.0538" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="df-c2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-b1-agg" value="Parsed Stream">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="669" y="470" />
+              <mxPoint x="669" y="235" />
+            </Array>
+            <mxPoint x="659" y="470" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="df-c3" edge="1" parent="1" source="df-prep" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="df-b2-agg" value="Parsed Stream">
+          <mxGeometry relative="1" x="0.0991" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="659" y="470" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="df-c4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-b3-agg" value="Parsed Stream">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="669" y="470" />
+              <mxPoint x="669" y="705" />
+            </Array>
+            <mxPoint x="659" y="470" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="df-c5" edge="1" parent="1" source="df-b1-agg" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-b1-s3" value="Parquet Append">
+          <mxGeometry relative="1" x="-0.0926" y="25" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="df-c6" edge="1" parent="1" source="df-b2-agg" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-b2-s3" value="Parquet Append">
+          <mxGeometry relative="1" x="-0.1264" y="20" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="df-c7" edge="1" parent="1" source="df-b3-agg" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="df-b3-s3" value="Parquet Append">
+          <mxGeometry relative="1" x="0.0926" y="25" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-container" name="ECS Fargate &amp; Streamlit Dashboard Architecture">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ct-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="860" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🚀 Containerization &amp;amp; Real-Time Streamlit Dashboard Architecture on AWS ECS Fargate" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-dck" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;" value="🐳 Docker Build Source&#xa;&lt;b&gt;docker-streamlit/&lt;/b&gt;&#xa;---------------------------------&#xa;• Dockerfile.txt&#xa;• requirements.txt&#xa;• app.py (Streamlit app)" vertex="1">
+          <mxGeometry height="140" width="220" x="80" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-ecr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;" value="📦 Amazon ECR Repo&#xa;&lt;b&gt;telecom-provider-app&lt;/b&gt;&#xa;Image Tag: mobile-monitor-app" vertex="1">
+          <mxGeometry height="100" width="220" x="395" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-ecs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#1B5E20;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;" value="⚡ AWS ECS Fargate Service&#xa;&lt;b&gt;Cluster:&lt;/b&gt; dcn-telecom-data-cluster&#xa;&lt;b&gt;Task Def:&lt;/b&gt; task-telecom-network-monitor&#xa;&lt;b&gt;IAM Role:&lt;/b&gt; dcn-ecs-task-execution-role&#xa;• Port: 8501 (Streamlit Server)" vertex="1">
+          <mxGeometry height="150" width="250" x="713" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-ath" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#4A148C;" value="🔍 boto3 Athena SQL Queries&#xa;---------------------------------&#xa;1. SELECT FROM gps_precision_by_provider&#xa;2. SELECT FROM signal_strength_by_operator&#xa;3. SELECT FROM status_count&#xa;&#xa;S3 Output Location:&#xa;s3://.../telecom_logs/query_output/" vertex="1">
+          <mxGeometry height="180" width="300" x="1098" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-dash-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#00838F;strokeWidth=2;fontSize=14;fontStyle=1;fontFace=Arial;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="420" width="1190" x="80" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-dash-hdr" parent="1" style="text;html=1;fontSize=16;fontStyle=1;fontColor=#006064;fontFace=Arial;align=center;" value="🖥️ Streamlit Web Application Interface (&lt;i&gt;Mobile Network Real-Time Dashboard&lt;/i&gt;)" vertex="1">
+          <mxGeometry height="30" width="800" x="275" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-w1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;strokeWidth=1.5;fontSize=11;fontColor=#004D40;align=left;spacingLeft=10;" value="📊 &lt;b&gt;Gps Precision By Provider&lt;/b&gt;&#xa;• Displays provider, average_precision, average_satellites, partition_hour, window_start/end&#xa;• Ordered by window_start DESC LIMIT 10" vertex="1">
+          <mxGeometry height="80" width="1130" x="110" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-w2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;strokeWidth=1.5;fontSize=11;fontColor=#004D40;align=left;spacingLeft=10;" value="📶 &lt;b&gt;Signal Strength By Operator&lt;/b&gt;&#xa;• Displays operator, average_signal, partition_hour, postal_code, window_start/end&#xa;• Ordered by window_start DESC LIMIT 10" vertex="1">
+          <mxGeometry height="80" width="1130" x="110" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-w3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;strokeWidth=1.5;fontSize=11;fontColor=#004D40;align=left;spacingLeft=10;" value="🚥 &lt;b&gt;Status Count&lt;/b&gt;&#xa;• Displays status, status_count, partition_hour, postal_code, window_start/end&#xa;• Ordered by window_start DESC LIMIT 10" vertex="1">
+          <mxGeometry height="80" width="1130" x="110" y="685" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFA000;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#FF6F00;align=center;" value="⏱️ Auto-Refresh Loop: Countdown timer automatically re-runs queries every 15 minutes (900 seconds) to present live streaming telemetry." vertex="1">
+          <mxGeometry height="40" width="1130" x="110" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-c1" edge="1" parent="1" source="ct-dck" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="ct-ecr" value="docker push">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-c2" edge="1" parent="1" source="ct-ecr" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="ct-ecs" value="Pulls Image">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-c3" edge="1" parent="1" source="ct-ecs" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="ct-ath" value="Executes Athena SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ct-c4" edge="1" parent="1" source="ct-ath" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#37474F;strokeWidth=2;" target="ct-dash-container" value="Populates Dataframes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="380" />
+              <mxPoint x="675" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-techstack" name="AWS Tech Stack &amp; Services">
+    <mxGraphModel dx="1492" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ts-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#DDDDDD;strokeWidth=1;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="740" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#232F3E;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="70" width="1420" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;fontColor=#FF9900;fontFace=Arial;" value="aws" vertex="1">
+          <mxGeometry height="36" width="60" x="70" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-4" parent="1" style="text;html=1;fontSize=18;fontColor=#FFFFFF;fontFace=Arial;align=left;" value="🛠️ AWS Infrastructure Specifications &amp;amp; Service Configuration Architecture" vertex="1">
+          <mxGeometry height="36" width="1100" x="150" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-kinesis" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;align=left;spacingLeft=15;" value="📡 &lt;b&gt;Data Ingestion Layer&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Amazon Kinesis Stream:&lt;/b&gt; mobile_coverage_logs&#xa;• &lt;b&gt;Region:&lt;/b&gt; ap-south-1&#xa;• &lt;b&gt;Producer Script:&lt;/b&gt; kinesis-producer.py&#xa;• &lt;b&gt;Partition Key Strategy:&lt;/b&gt; hash(row[&#39;hour&#39;])" vertex="1">
+          <mxGeometry height="140" width="420" x="80" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-glue" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#B71C1C;align=left;spacingLeft=15;" value="⚡ &lt;b&gt;Stream Processing Layer&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;AWS Glue Streaming Job:&lt;/b&gt; network_streaming_logs&#xa;• &lt;b&gt;Script:&lt;/b&gt; glue/mobile_coverage_streaming.py&#xa;• &lt;b&gt;Engine:&lt;/b&gt; PySpark Structured Streaming&#xa;• &lt;b&gt;Windowing:&lt;/b&gt; 2-min tumbling window with 2-min watermark&#xa;• &lt;b&gt;Trigger:&lt;/b&gt; 20-second micro-batch execution" vertex="1">
+          <mxGeometry height="140" width="420" x="540" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E05243;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#E65100;align=left;spacingLeft=15;" value="🪣 &lt;b&gt;Data Lake Storage Layer&lt;/b&gt;&lt;br&gt;-----------------------------------------------------------&lt;br&gt;• &lt;b&gt;S3 Bucket:&lt;/b&gt; dcn-dataengg&lt;br&gt;• &lt;b&gt;Aggregations Prefix:&lt;/b&gt; telecom_logs/aggregations/&lt;br&gt;• &lt;b&gt;Checkpoints Prefix:&lt;/b&gt; telecom_logs/checkpoints/&lt;br&gt;• &lt;b&gt;Query Output Prefix:&lt;/b&gt; telecom_logs/query_output/&lt;br&gt;• &lt;b&gt;Storage Format:&lt;/b&gt; Apache Parquet (Snappy)" vertex="1">
+          <mxGeometry height="140" width="420" x="1000" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-catalog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#0D47A1;align=left;spacingLeft=15;" value="🗄️ &lt;b&gt;Data Catalog &amp;amp; Schema Governance&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Glue Catalog DB:&lt;/b&gt; mobile_network_aggregations&#xa;• &lt;b&gt;Glue Crawler 1:&lt;/b&gt; signal_strength_by_operator_crawler&#xa;• &lt;b&gt;Glue Crawler 2:&lt;/b&gt; gps_precision_by_provider_crawler&#xa;• &lt;b&gt;Glue Crawler 3:&lt;/b&gt; status_count_crawler" vertex="1">
+          <mxGeometry height="140" width="420" x="80" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-athena" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#4A148C;align=left;spacingLeft=15;" value="🔍 &lt;b&gt;Interactive Query Engine&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;Service:&lt;/b&gt; Amazon Athena&#xa;• &lt;b&gt;Target Database:&lt;/b&gt; mobile_network_aggregations&#xa;• &lt;b&gt;Tables Queried:&lt;/b&gt; gps_precision_by_provider,&#xa;  signal_strength_by_operator, status_count&#xa;• &lt;b&gt;Execution:&lt;/b&gt; Serverless SQL over S3 Parquet" vertex="1">
+          <mxGeometry height="140" width="420" x="540" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-ecs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#1B5E20;align=left;spacingLeft=15;" value="🐳 &lt;b&gt;Containerized Web Application&lt;/b&gt;&#xa;-----------------------------------------------------------&#xa;• &lt;b&gt;ECR Repository:&lt;/b&gt; telecom-provider-app&#xa;• &lt;b&gt;ECS Cluster:&lt;/b&gt; dcn-telecom-data-cluster&#xa;• &lt;b&gt;Task Definition:&lt;/b&gt; task-telecom-network-monitor&#xa;• &lt;b&gt;Launch Type:&lt;/b&gt; AWS Fargate (Serverless Containers)&#xa;• &lt;b&gt;Dashboard Framework:&lt;/b&gt; Streamlit (Python 3.10)" vertex="1">
+          <mxGeometry height="140" width="420" x="1000" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-iam-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#546E7A;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#263238;align=left;spacingLeft=20;" value="🔒 &lt;b&gt;IAM Roles &amp;amp; Security Specifications&lt;/b&gt;&#xa;------------------------------------------------------------------------------------------------------------------------------------------&#xa;• &lt;b&gt;dcn-dataengg-glue-role:&lt;/b&gt;&#xa;  Permissions: AmazonKinesisFullAccess, AmazonS3FullAccess, AWSGlueServiceRole, CloudWatchLogsFullAccess&#xa;  Purpose: Grants AWS Glue streaming job full rights to consume Kinesis, write Parquet to S3, and emit logs.&#xa;&#xa;• &lt;b&gt;dcn-ecs-task-execution-role:&lt;/b&gt;&#xa;  Permissions: AmazonDynamoDBFullAccess, AmazonECSTaskExecutionRolePolicy, AmazonS3FullAccess, CloudWatchLogsFullAccess&#xa;  Purpose: Grants ECS Fargate container permission to pull image from ECR, query Athena, read S3, and log to CloudWatch." vertex="1">
+          <mxGeometry height="180" width="1340" x="80" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ts-footer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#004D40;align=center;" value="DCN AWS Data Engineering Certification Project #7 — Telecom Telemetry Streaming &amp;amp; Real-Time Analytics Infrastructure" vertex="1">
+          <mxGeometry height="40" width="1340" x="80" y="700" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
